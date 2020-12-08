@@ -1,0 +1,51 @@
+\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt}
+\input{pre-packages}
+\input{pre-newcommand}
+\input{pre-Seitenlayout}
+\input{pre-Kopf-Fusszeile-2010}
+\input{pre-Kopf-Fusszeilen-text-Bericht}
+\newcommand{\titelLV}{Physics Lab 3}
+%---------------------------- VARIABLEN festlegen ------------------
+%----------- Pro Versuch zu ändernde Angaben -----------------------
+\newcommand{\versuch}{3} % Versuchsnummer einfügen
+\newcommand{\untertitelb}{Torsional Pendulum} % Titel des Versuchs einfügen
+\newcommand{\datumLV}{17.11.2020} % Datum einfügen
+\newcommand{\deadline}{1.12.2020} % Abgabedatum ist der 1.12.2020
+\newcommand{\dateLVa}{Dezember 15, 2020}
+\newcommand{\dateLVb}{January 5, 2021}
+%----------- TITEL
+\newcommand{\untertitela}{Experiment P3-3}
+% -------- Student 1
+\newcommand{\nameA}{Cihan Ünlü}
+% --------- Student 2
+\newcommand{\nameB}{Dennis Hunter}
+% --------- Student 3, falls vorhanden
+\newcommand{\nameC}{Sebastian Kreß}
+%::::::::::::::::::::::::::::::::::
+%\input{chapters/glossar}
+%\renewcommand\USenglishtoday
+\addbibresource{quellen_test.bib}
+\begin{document}%\selectlanguage{USenglish}
+%-----------------------------------------------------------------
+\input{chapters/1_deck}
+%-----------------------------------------------------
+\tableofcontents
+\newpage
+%--------------------
+\input{chapters/2_einleitung}
+\input{chapters/3_aufbau}
+\input{chapters/4_durchführung}
+\input{chapters/5_auswertung}
+\input{chapters/6_fazit}
+%-------------------
+\newpage
+\listoffigures 
+\listoftables
+\input{chapters/8_glossar}
+\appendix
+\input{chapters/7_anhang}
+%\bibliography{Z:/Dokumente/HSRM/LaTex_Quellen/HSRM_Quellen/quellen}
+\printbibliography
+%\bibliographystyle{plaindin}
+%==========================================
+\end{document}

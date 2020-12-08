@@ -1,0 +1,10 @@
+This is makeindex, version 2.15 [MiKTeX 2.9.7400 64-bit] (kpathsea + Thai support).
+Scanning style file C:/Users/Hunter/AppData/Local/Programs/MiKTeX 2.9/makeindex/nomentbl/nomentbl.ist...............
+** Input style error (file = C:/Users/Hunter/AppData/Local/Programs/MiKTeX 2.9/makeindex/nomentbl/nomentbl.ist, line = 47):
+   -- Unknown specifier \endinput.
+done (15 attributes redefined, 1 ignored).
+Scanning input file Phys_Praktikum_3_xx.nlo....done (2 entries accepted, 0 rejected).
+Sorting entries....done (2 comparisons).
+Generating output file Phys_Praktikum_3_xx.nls....done (11 lines written, 0 warnings).
+Output written in Phys_Praktikum_3_xx.nls.
+Transcript written in Phys_Praktikum_3_xx.ilg.
