@@ -1,2 +1,65 @@
 \chapter{Introduction}
 %
+\section*{Free Harmonic and Damped Oscillation}
+If a system capable of oscillation is deflected out of its equilibrium position and is experiencing a restoring force
+proportional to its deflection this system is called an \textit{harmonic oscillator}. If a dampening force such as friction
+is introduced, the system no longer oscillates freely but rather damped.\par
+Both, damped and harmonic oscillations are considered \textit{free} if there is no continuous, the oscillation driving
+stimulus present.
+%
+\section*{Natural Angular Frequency of a Harmonic Oscillation}
+%
+Depending of the very characteristics of the given system it will oscillate at a distinct frequency - the natural angular
+frequency \( \omega_0 \).
+\section*{Differential Equation of the Damped Harmonic Oscillation}
+\begin{equation}
+    I \ddot{\varphi} = -D\varphi -\rho\dot{\varphi}+M\cos(\omega t)
+\end{equation}
+\section*{Damping cases}
+\section*{Rotational Inerta}
+\section*{\textsc{Steiner}'s Theorem}
+\section*{Eddy Current Brake}
+\section*{Constant Current Constant Voltage Operation of a PSU}
+\section*{Capacitance of a Parallel Plate Capacitor}
+\section*{Time-Constant of an RC-Circuit}
+%
+\section{Preparation}
+%
+\begin{equation}
+    \vec{M}_{ Inert } + \vec{M}_{ Frict } + \vec{ M}_{ Rest } = 0 \quad \Leftrightarrow \quad J \cdot \ddot\varphi(t) - k \cdot \dot\varphi(t) - D^* \cdot \varphi(t) = 0
+\end{equation}
+can be written as
+\begin{equation}
+    \ddot\varphi(t) + 2 \delta \cdot \dot\varphi(t) + \omega_0^2 \cdot \varphi(t) = 0
+    \label{eq:dampedOscillation}
+\end{equation}
+with
+\begin{equation}
+    -\frac{k}{J} = 2\delta, \quad -\frac{D^*}{J} = \omega_0^2
+\end{equation}
+whereas \cref{eq:dampedOscillation} is a second degree harmonic differential equation.
+The chosen approach is:
+\begin{equation}
+    \varphi(t) = \hat{\varphi} e^{\lambda t}, \quad \dot{\varphi}(t) = \lambda \hat{\varphi} e^{\lambda t}, \quad \ddot{\varphi}(t) = \lambda^2 \hat{\varphi} e^{\lambda t}
+\end{equation}
+Pluged into \cref{eq:dampedOscillation} gives
+\begin{align}
+    \left(\lambda^2 + 2\delta \lambda + \omega_0^2\right) \hat{\varphi}e^{\lambda t} = 0 \nonumber \\
+    \lambda_{1,2} = -\delta \pm \sqrt{\delta^2-\omega_0^2} \nonumber \\
+\end{align}
+Here two possible cases are to be distinguished:
+\begin{equation}
+    \lambda_{1,2} =
+    \begin{cases}
+        -\delta \pm i\omega_d \qquad \text{for} \qquad \delta^2 < \omega_0^2 \quad \text{(a)}\\
+        -\delta \pm \omega_d \qquad \text{for} \qquad \delta^2 \geq \omega_0^2 \quad \text{(b)}
+    \end{cases}
+\end{equation}
+In \cref{eq:dampedOscillation}:
+\begin{equation}
+    \varphi_1(t) = \varphi_1 e^{-\delta + i\omega_d t}, \quad \varphi_2(t) = \varphi_2 e^{-\delta - i\omega_d t}
+\end{equation}
+Linear combination of \( \varphi_1(t) \) and \( \varphi_2(t) \) lastly leads to
+\begin{equation}
+    \varphi(t) = \varphi_1 e^{-\delta + i\omega_d t} + \varphi_2 e^{-\delta - i\omega_d t} = \hat{\varphi}e^{-\delta t} \cdot \cos{\left( \omega_d t + \varphi_0 \right)}
+\end{equation}
