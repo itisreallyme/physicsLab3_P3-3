@@ -55,7 +55,7 @@
         \begin{cases}
                 -\delta \pm i\omega_d \qquad \text{for} \qquad \delta^2 < \omega_0^2 \quad \text{(a)}\\
                 -\delta \pm \omega_d \qquad \text{for} \qquad \delta^2 \geq \omega_0^2 \quad \text{(b)}
-            \end{cases}
+        \end{cases}
         \end{equation}
         In \cref{eq:dampedOscillation}:
         \begin{equation}
@@ -129,7 +129,7 @@
         \end{align}
         Say the zero position is chosen such as the whole area of the rotor takes effect (see \cref{subfig:rotorAt0})
         \cref{eq:angularDependencyOfTheArea} maximizes. Thus the absolute capacitance of one of the capacitors is maximized.
-        Stepping the rotor about \( \varphi = \frac{\pi}{2} \) as seen in \cref{subfig:rotorAt.5pi} halfes the
+        Stepping the rotor about \( \varphi = \frac{\pi}{2} \) as seen in \cref{subfig:rotorAt.5pi} halves the
         effective area of the capacitor halfing the total capacitance. At an angular displacement of \( \varphi = \pi \)
         the capacitance equates to zero respectively.\par
         Combining \cref{eq:angularCapacitance} and \cref{eq:angularDependencyOfTheArea} gives \footnote{The solution is missing a factor of 2 in front of \(\varphi\)}
@@ -145,7 +145,7 @@
             U_C(t) = U_0 ( 1-e^{-\frac{t}{\tau}})
             \label{eq:chargingCurve}
         \end{equation}
-        Beeing interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \) \cref{eq:chargingCurve}
+        Being interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \) \cref{eq:chargingCurve}
         can be transformed as follows:
         \begin{align}
             1- \frac{U_{th}}{U_0} = e^{-\frac{t_{th}}{\tau}} \nonumber \\
@@ -158,8 +158,8 @@
     \subsection*{Determining the Angular Deflection by the difference of Timer Ticks}
         %
         The time to reach the threshold voltage as of \cref{eq:timeToThresholfVoltage} is captured indipendently due to
-        each capacitor beeing connected to individual GPIOs.\par
-        Since the charging curve of the capacitors differes in an anti-proportional manner when an angular deflection takes
+        each capacitor being connected to individual GPIOs.\par
+        Since the charging curve of the capacitors differs in an anti-proportional manner when an angular deflection takes
         place the absolute value of the time difference gives the the angle about zero while the sign gives the direction.
         Therefore, taken these considerations in account and merging \cref{eq:angularCapacitance} and \cref{eq:timeToThresholfVoltage}
         gives:
@@ -199,6 +199,12 @@
         \begin{equation}
             \frac{dn(\varphi)}{d\varphi} = \chi' \cdot \varphi \frac{d}{d\varphi} = \chi'
         \end{equation}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.7\textwidth]{aufbau/clk_signal_timing_diagram.jpg}
+            \caption[Timing diagram showing the signal transision]{Timing diagram showing the signal transision.}
+            \label{fig:timing_diagram}
+        \end{figure}
         The clock frequency of the \micro C is \( f = \SI[]{16}[]{MHz} \) which gives a cycle time of \( \delta t = \SI[]{62.5}[]{ns} \).\par
         To ready the capacitors for the next charging cycle they need to be discharged as quick as possible. Considering
         that a time to discharge the capacitors \( < \Delta t \) makes no significant difference the unknown value \( R \)
@@ -210,7 +216,7 @@
             \label{eq:resistor_approximation}
         \end{gather}
         In the equation above the assumptions are made that a discharge rate of 95\% is sufficiant and the circuit needs
-        to be able to discharge the capacitor within the timeframe \( \Delta t \) while beeing at its maximum capacitance.
+        to be able to discharge the capacitor within the timeframe \( \Delta t \) while being at its maximum capacitance.
         Thus
         \begin{align}
             C_{max} &= \varepsilon_0 \frac{\pi D^2}{8d} \nonumber \\
