@@ -1,72 +1,99 @@
 \chapter{Introduction}
 %
-\section*{Free Harmonic and Damped Oscillation}
-    If a system capable of oscillation is deflected out of its equilibrium position and is experiencing a restoring force
-    proportional to its deflection this system is called an \textit{harmonic oscillator}. If a dampening force such as friction
-    is introduced, the system no longer oscillates freely but rather damped.\par
-    Both, damped and harmonic oscillations are considered \textit{free} if there is no continuous, the oscillation driving
-    stimulus present.
+\section{Terms and Definitions}
+    \subsection*{Free Harmonic and Damped Oscillation}
+        If a system capable of oscillation is deflected out of its equilibrium position and is experiencing a restoring force
+        proportional to its deflection this system is called an \textit{harmonic oscillator}. If a dampening force such as friction
+        is introduced, the system no longer oscillates freely but rather damped.\par
+        Both, damped and harmonic oscillations are considered \textit{free} if there is no continuous, the oscillation driving
+        stimulus present.
+        %
+    \subsection*{Natural Angular Frequency of a Harmonic Oscillation}
+        %
+        Depending of the very characteristics of the given system it will oscillate at a distinct frequency - the natural angular
+        frequency \( \omega_0 \).
+    \subsection*{Differential Equation of the Damped Harmonic Oscillation}
+        \begin{equation}
+            I \ddot{\varphi} = -D\varphi -\rho\dot{\varphi}+M\cos(\omega t)
+        \end{equation}
+    \subsection*{Damping cases}
+    \subsection*{Rotational Inerta}
+    \subsection*{\textsc{Steiner}'s Theorem}
+    \subsection*{Eddy Current Brake}
+    \subsection*{Constant Current Constant Voltage Operation of a PSU}
+    \subsection*{Capacitance of a Parallel Plate Capacitor}
+    \subsection*{Time-Constant of an RC-Circuit}
     %
-\section*{Natural Angular Frequency of a Harmonic Oscillation}
-    %
-    Depending of the very characteristics of the given system it will oscillate at a distinct frequency - the natural angular
-    frequency \( \omega_0 \).
-\section*{Differential Equation of the Damped Harmonic Oscillation}
-    \begin{equation}
-        I \ddot{\varphi} = -D\varphi -\rho\dot{\varphi}+M\cos(\omega t)
-    \end{equation}
-\section*{Damping cases}
-\section*{Rotational Inerta}
-\section*{\textsc{Steiner}'s Theorem}
-\section*{Eddy Current Brake}
-\section*{Constant Current Constant Voltage Operation of a PSU}
-\section*{Capacitance of a Parallel Plate Capacitor}
-\section*{Time-Constant of an RC-Circuit}
-%
 \section{Preparation}
 %
-\subsection*{Deriving the Equation for Damped Free Oscillation}
+    \subsection*{Deriving the Equation for Damped Free Oscillation}\label{sec:preparation_task_1}
+        %
+        \begin{equation}
+            \vec{M}_{ Inert } + \vec{M}_{ Frict } + \vec{ M}_{ Rest } = 0 \quad \Leftrightarrow \quad J \cdot \ddot\varphi(t) - k \cdot \dot\varphi(t) - D^* \cdot \varphi(t) = 0
+        \end{equation}
+        can be written as
+        \begin{equation}
+            \ddot\varphi(t) + 2 \delta \cdot \dot\varphi(t) + \omega_0^2 \cdot \varphi(t) = 0
+            \label{eq:dampedOscillation}
+        \end{equation}
+        with
+        \begin{equation}
+            -\frac{k}{J} = 2\delta, \quad -\frac{D^*}{J} = \omega_0^2
+        \end{equation}
+        whereas \cref{eq:dampedOscillation} is a second degree harmonic differential equation.
+        The chosen approach is:
+        \begin{equation}
+            \varphi(t) = \hat{\varphi} e^{\lambda t}, \quad \dot{\varphi}(t) = \lambda \hat{\varphi} e^{\lambda t}, \quad \ddot{\varphi}(t) = \lambda^2 \hat{\varphi} e^{\lambda t}
+        \end{equation}
+        Pluged into \cref{eq:dampedOscillation} gives
+        \begin{align}
+            \left(\lambda^2 + 2\delta \lambda + \omega_0^2\right) \hat{\varphi}e^{\lambda t} = 0 \nonumber \\
+            \lambda_{1,2} = -\delta \pm \sqrt{\delta^2-\omega_0^2} \nonumber \\
+        \end{align}
+        Here two possible cases are to be distinguished:
+        \begin{equation}
+            \lambda_{1,2} =
+            \begin{cases}
+                    -\delta \pm i\omega_d \qquad \text{for} \qquad \delta^2 < \omega_0^2 \quad \text{(a)}\\
+                    -\delta \pm \omega_d \qquad \text{for} \qquad \delta^2 \geq \omega_0^2 \quad \text{(b)}
+            \end{cases}
+            \end{equation}
+            In \cref{eq:dampedOscillation}:
+            \begin{equation}
+                \varphi_1(t) = \varphi_1 e^{-\delta + i\omega_d t}, \quad \varphi_2(t) = \varphi_2 e^{-\delta - i\omega_d t}
+            \end{equation}
+            Linear combination of \( \varphi_1(t) \) and \( \varphi_2(t) \) lastly leads to
+            \begin{equation}
+                \varphi(t) = \varphi_1 e^{-\delta + i\omega_d t} + \varphi_2 e^{-\delta - i\omega_d t} = \hat{\varphi}e^{-\delta t} \cdot \cos{\left( \omega_d t + \varphi_0 \right)}
+            \end{equation}
+            %
+    \subsection*{Unknown Angular Inertia of the Pendulum}\label{sec:preparation_task_3}
     %
-    \begin{equation}
-        \vec{M}_{ Inert } + \vec{M}_{ Frict } + \vec{ M}_{ Rest } = 0 \quad \Leftrightarrow \quad J \cdot \ddot\varphi(t) - k \cdot \dot\varphi(t) - D^* \cdot \varphi(t) = 0
-    \end{equation}
-    can be written as
-    \begin{equation}
-        \ddot\varphi(t) + 2 \delta \cdot \dot\varphi(t) + \omega_0^2 \cdot \varphi(t) = 0
-        \label{eq:dampedOscillation}
-    \end{equation}
-    with
-    \begin{equation}
-        -\frac{k}{J} = 2\delta, \quad -\frac{D^*}{J} = \omega_0^2
-    \end{equation}
-    whereas \cref{eq:dampedOscillation} is a second degree harmonic differential equation.
-    The chosen approach is:
-    \begin{equation}
-        \varphi(t) = \hat{\varphi} e^{\lambda t}, \quad \dot{\varphi}(t) = \lambda \hat{\varphi} e^{\lambda t}, \quad \ddot{\varphi}(t) = \lambda^2 \hat{\varphi} e^{\lambda t}
-    \end{equation}
-    Pluged into \cref{eq:dampedOscillation} gives
-    \begin{align}
-        \left(\lambda^2 + 2\delta \lambda + \omega_0^2\right) \hat{\varphi}e^{\lambda t} = 0 \nonumber \\
-        \lambda_{1,2} = -\delta \pm \sqrt{\delta^2-\omega_0^2} \nonumber \\
-    \end{align}
-    Here two possible cases are to be distinguished:
-    \begin{equation}
-        \lambda_{1,2} =
-        \begin{cases}
-                -\delta \pm i\omega_d \qquad \text{for} \qquad \delta^2 < \omega_0^2 \quad \text{(a)}\\
-                -\delta \pm \omega_d \qquad \text{for} \qquad \delta^2 \geq \omega_0^2 \quad \text{(b)}
-        \end{cases}
-        \end{equation}
-        In \cref{eq:dampedOscillation}:
+        The angular inertia of the pendulum \( J_P \) can be determined by adding a known angular inertia \( J_R \) of a cylindrical rod. As \cref{eq:DEParameters} delivers
+        %
         \begin{equation}
-            \varphi_1(t) = \varphi_1 e^{-\delta + i\omega_d t}, \quad \varphi_2(t) = \varphi_2 e^{-\delta - i\omega_d t}
-        \end{equation}
-        Linear combination of \( \varphi_1(t) \) and \( \varphi_2(t) \) lastly leads to
-        \begin{equation}
-            \varphi(t) = \varphi_1 e^{-\delta + i\omega_d t} + \varphi_2 e^{-\delta - i\omega_d t} = \hat{\varphi}e^{-\delta t} \cdot \cos{\left( \omega_d t + \varphi_0 \right)}
+            \omega_0=\sqrt{\frac{D^*}{J}}
         \end{equation}
         %
-    \subsection*{Rotational Inertia of a Cylindrical Rod}
+        and \( \omega=\frac{2\pi}{T} \), the following relation is given:
+        %
+        \begin{align}
+            \omega_{0,P}=\sqrt{\frac{D^*}{J_P}}=\frac{2\pi}{T_P} \quad              &\Leftrightarrow \quad 2\pi=T_P\cdot\sqrt{\frac{D^*}{J_P}} \label{eq:omegaP} \\
+            \omega_{0,P+R}=\sqrt{\frac{D^*}{J_P+J_R}}=\frac{2\pi}{T_{P+R}} \quad    &\Leftrightarrow \quad 2\pi=T_{P+R}\cdot\sqrt{\frac{D^*}{J_P+J_R}} \label{eq:omegaP+R}
+        \end{align}
+        %
+        When \cref{eq:omegaP} and \cref{eq:omegaP+R} are equated:
+        %
+        \begin{align}
+                                    &T_P\cdot\sqrt{\frac{D^*}{J_P}}=T_{P+R}\cdot\sqrt{\frac{D^*}{J_P+J_R}} \nonumber\\
+            \Leftrightarrow \quad   &\left( \frac{T_{P+R}}{T_P} \right)^2 =\frac{J_P+J_R}{J_P}=1+\frac{J_R}{J_P} \nonumber\\
+            \Leftrightarrow \quad   &\frac{J_R}{J_P}=\left( \frac{T_{P+R}}{T_P} \right)^2-1 \nonumber\\
+            \Rightarrow \quad       &J_P=\frac{J_R}{\left( \frac{T_{P+R}}{T_P} \right)^2-1}
+        \end{align}
+        %
+        The angular inertia of the pendulum can be calculated without knowing the torsion constant \( D^* \).
+        %
+    \subsection*{Rotational Inertia of a Cylindrical Rod}\label{sec:preparation_task_4}
         %
         \begin{figure}[h]
             \centering
@@ -75,7 +102,7 @@
             \label{fig:rotationalIntertia_of_Cyl}
         \end{figure}
         %
-        Inertia of a rotating mass dimensionless mass is proportional to the square of the distance to its rotational axis as.
+        Inertia of a rotating mass dimensionless mass is proportional to the square of the distance to its rotational axis.
         As the mass of a cylindrical body is distributed over its volume, it is necessary to integrate over all \( dm  \) along
         the distance \( r \) from the center of rotation.
         \begin{equation}
@@ -92,7 +119,7 @@
             J_Z = \int_{-\nicefrac{L}{2}}^{\nicefrac{L}{2}} \frac{M}{L} x^2 dx = \frac{1}{12}M L^2
         \end{equation}
         %
-    \subsection*{Equations for the Sensor Capacitances}
+    \subsection*{Equations for the Sensor Capacitances}\label{sec:preparation_task_5}
         To derive:
         \begin{align}
             C_1(\varphi) = \varepsilon_0 \frac{\pi D^2}{16 d} \left( 1 - \frac{2\varphi}{\pi} \right) \\
@@ -106,8 +133,8 @@
         \begin{figure}[h]
             \centering
             \subfloat[Rotor at \( \varphi = 0 \)\label{subfig:rotorAt.5pi}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_0.5pi.jpg}}
-            \subfloat[Rotor at \( \varphi = \frac{\pi}{2} \)\label{subfig:rotorAtpi}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_pi.jpg}}
-            \subfloat[Rotor at \( \varphi = -\frac{\pi}{2} \)\label{subfig:rotorAt0}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_0.jpg}}
+            \subfloat[Rotor at \( \varphi = \pm \frac{\pi}{2} \)\label{subfig:rotorAtpi}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_pi.jpg}}
+            \subfloat[Rotor at \( \varphi = \mp \frac{\pi}{2} \)\label{subfig:rotorAt0}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_0.jpg}}
             \caption[Schematical assembly of the angular sensor]{Schematical assembly of the angular sensor. The semi circular rotor plate (green) sandwiched between the two stators (red). The area of the rotor facing one of the vertical stator
             pairs varies with the angular displacement \( \varphi \)
             of the rotor.}
@@ -133,12 +160,20 @@
         effective area of the capacitor halfing the total capacitance. At an angular displacement of \( \varphi = \pi \)
         the capacitance equates to zero respectively.\par
         Combining \cref{eq:angularCapacitance} and \cref{eq:angularDependencyOfTheArea} gives \footnote{The solution is missing a factor of 2 in front of \(\varphi\)}
-        \begin{align}
-            C_{1,2} = \varepsilon_0 \varepsilon_r \frac{1}{2} \frac{\pi D^2}{8d} \left( 1 \pm \frac{\varphi}{\pi} \right) \nonumber \\
-            C_{1,2} = \varepsilon_0 \varepsilon_r \frac{\pi D^2}{16d} \left( 1 \pm \frac{\varphi}{\pi} \right)
-        \end{align}
+        \begin{equation}
+            C_{1,2} = \varepsilon_0 \frac{\pi D^2}{16d} \left( 1 \pm \frac{2\varphi}{\pi} \right)
+        \end{equation}
         %
-    \subsection*{Time to Reach the Threshold Voltage}
+        \begin{equation}
+            \left(1 \pm \frac{2\varphi}{\pi} \right)
+            \begin{cases}
+                = 0 \quad \text{for} \quad \varphi = \pm \frac{\pi}{2} \nonumber \\
+                = 1 \quad \text{for} \quad \varphi = 0 \nonumber \\
+                = 2 \quad \text{for} \quad \varphi = \mp \frac{\pi}{2} \nonumber
+            \end{cases}
+        \end{equation}
+        %
+    \subsection*{Time to Reach the Threshold Voltage}\label{sec:preparation_task_6}
         %
         The charging curve of a capacitor is given by \cref{eq:chargingCurve}.
         \begin{equation}
@@ -147,15 +182,15 @@
         \end{equation}
         Being interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \) \cref{eq:chargingCurve}
         can be transformed as follows:
-        \begin{align}
+        \begin{gather}
             1- \frac{U_{th}}{U_0} = e^{-\frac{t_{th}}{\tau}} \nonumber \\
             \Leftrightarrow \nonumber \\
-            t_{th} = - \ln(1- \frac{U_{th}}{U_0}) \cdot \tau
+            t_{th} = - \ln\left(1- \frac{U_{th}}{U_0}\right) \cdot \tau
             \label{eq:timeToThresholfVoltage}
-        \end{align}
+        \end{gather}
         with the time constant \( \tau = R \cdot C \).
         %
-    \subsection*{Determining the Angular Deflection by the difference of Timer Ticks}
+    \subsection*{Determining the Angular Deflection by the Difference of Timer Ticks}\label{sec:preparation_task_7}
         %
         The time to reach the threshold voltage as of \cref{eq:timeToThresholfVoltage} is captured indipendently due to
         each capacitor being connected to individual GPIOs.\par
@@ -164,9 +199,9 @@
         Therefore, taken these considerations in account and merging \cref{eq:angularCapacitance} and \cref{eq:timeToThresholfVoltage}
         gives:
         \begin{align}
-            \Delta t_{th}(\varphi)   &= t_{th,1} - t_{th,2} = \ln\left( 1- \frac{U_{th}}{U_0} \right)R\left[ C_2(\varphi) - C_2(\varphi) \right] \nonumber \\
-                            &= \varepsilon_0 R \frac{\pi D^2}{16d} \ln\left( \frac{U_{th}}{U_0} \right) \left[ \left( 1 + \frac{2\varphi}{\pi} \right) - \left( 1 - \frac{2\varphi}{\pi} \right) \right] \nonumber \\
-                            &= \varepsilon_0 R \frac{4D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \cdot \varphi
+            \Delta t_{th}(\varphi)   &= t_{th,1} - t_{th,2} = -\ln\left( 1- \frac{U_{th}}{U_0} \right)R\left[ C_1(\varphi) - C_2(\varphi) \right] \nonumber \\
+                            &= -\varepsilon_0 R \frac{\pi D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \left[ \left( 1 + \frac{2\varphi}{\pi} \right) - \left( 1 - \frac{2\varphi}{\pi} \right) \right] \nonumber \\
+                            &= -\varepsilon_0 R \frac{4D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \cdot \varphi
             \label{eq:time_to_reach_thresholdVoltage}
         \end{align}
         Here \( \varepsilon_0, R, D, d, U_{th} \text{ and } U_0 \) remain constant and can be gathered as a proportionality
@@ -192,7 +227,7 @@
         \end{equation}
         to distinguish between a CW/CCW rotation.
         %
-    \subsection*{Sensitivity of the angular sensor}
+    \subsection*{Sensitivity of the Angular Sensor}\label{sec:preparation_task_8}
         %
         As seen in \cref{eq:simplified_time_to_reach_thresholdVoltage} the tick rate relates linearly with the angular displacement \( \varphi \).
         Therefore, the maximum resolution of the angular sensor expressed as \textit{ticks per radiant} \textbf{is} \( \chi' \).
@@ -220,20 +255,20 @@
         Thus
         \begin{align}
             C_{max} &= \varepsilon_0 \frac{\pi D^2}{8d} \nonumber \\
-                    &= \SI{8,85\cdot10^{-12}}{\frac{\ampere\second}{\volt\metre}} \frac{\pi \cdot \SI{0.12}{m}}{16 \cdot \SI{0.01}{m}} \nonumber \\
-                    &= \SI{2.50}{pF}
+                    &= \SI{8,85\cdot10^{-12}}{\frac{\ampere\second}{\volt\metre}} \frac{\pi \cdot \SI{0.12^2}{m^2}}{8 \cdot \SI{0.01}{m}} \nonumber \\
+                    &= \SI{5.01}{pF}
             \label{val:C_max}
         \end{align}
         in \cref{eq:resistor_approximation} gives a value for the resistance as
         \begin{equation}
-            \frac{\SI{62.5}{ns}}{3 \cdot \SI{2.5}{pF}} = \SI{25}{k\ohm}
+            \frac{\SI{62.5}{ns}}{3 \cdot \SI{5.01}{pF}} \approx \SI{4160.9}{k\ohm}
         \end{equation}
-        This lies between the two more common E-Series values of \SI{27}{k\ohm} and \SI{22}{k\ohm}. For further calculations
+        This lies between the two more common E-Series values of \SI{4.7}{k\ohm} and \SI{3.9}{k\ohm}. For further calculations
         the latter is chosen as a higher resistance would increase the discharge time.\par\medskip
         Plugging in the given values of for \( \varepsilon_0, D, d, U_{th}, U_0 \) and the calculated values for \( \Delta t \text{ and } R \)
         equates \cref{eq:simplified_time_to_reach_thresholdVoltage} to
         \begin{align}
-            \chi'   &= \varepsilon_0 R \frac{4D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \Delta t^{-1} \nonumber \\
-                    &= \SI{8.85 \cdot 10^{-12}}{\frac{As}{Vm}} \cdot \SI{22}{k\ohm} \cdot \frac{\pi \cdot \SI{0.12^2}{\metre\squared}}{16 \cdot \SI{0.01}{\metre}} \ln\left( 1 - \frac{\SI{2.5}{\volt}}{\SI{5}{\volt}} \right) \cdot \frac{1}{\SI{62.5}{ns}} \nonumber \\
-                    &\approx \SI{2384.87}{\radian^{-1}}
+            \chi'   &= -\varepsilon_0 R \frac{4 D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \Delta t^{-1} \nonumber \\
+                    &= -\SI{8.85 \cdot 10^{-12}}{\frac{As}{Vm}} \cdot \SI{3.9}{k\ohm} \cdot \frac{4 \cdot \SI{0.12^2}{\metre\squared}}{16 \cdot \SI{0.01}{\metre}} \ln\left( 1 - \frac{\SI{2.5}{\volt}}{\SI{5}{\volt}} \right) \cdot \frac{1}{\SI{62.5}{ns}} \nonumber \\
+                    &\approx \SI{0.138}{\radian^{-1}}
         \end{align}
