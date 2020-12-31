@@ -26,14 +26,14 @@
 \usepackage[right]{eurosym}
 %\usepackage{caption2} %nicht zusammen mit sidecap
 %\usepackage{exscale}
-\usepackage{ellipsis}
+\usepackage{ellipsis} % fixes spacing between ellipses
 \usepackage{graphicx}
 \usepackage{float}
 %\usepackage{floatflt}
 %----------------------------------------
-\usepackage{gensymb} %-----------
+\usepackage{gensymb} % provides \degree, \ohm, \micro, etc
 %\usepackage{helvet}
-\usepackage{csquotes}
+\usepackage{csquotes} % better quotations
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{lastpage}  %----------
@@ -47,10 +47,10 @@
 %\usepackage[intoc]{nomencl}   % zwei Spalten beim Formelzeichenverzeichnis
 %\usepackage[german,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
 \usepackage[english,intoc]{nomentbl} %vier Spalten bei Formelzeichenverzeichnis
-\usepackage{nicefrac} %----
+% \usepackage{nicefrac} % part of units
 %\usepackage{picins} %----------
 \usepackage{paralist} %--------
-\usepackage{parallel}  %----------
+% \usepackage{parallel}  % Provides a parallel environment which allows two potentially different texts to be typeset in two columns, while maintaining alignment
 \usepackage{pdfpages} %-------
 % Define user colors using the RGB model
 %\usepackage{colortbl}
@@ -71,11 +71,12 @@
 \usepackage{textcomp}
 \usepackage{tocbasic}
 %\usepackage{tikz}
-\usepackage{times} 
+% \usepackage{times} % deprecated. replaced by mathptmx
+\usepackage{mathptmx}
 \usepackage{units} %----------
 \usepackage{url}
 \usepackage{wrapfig} %----------
-\usepackage{xr-hyper}
+% \usepackage{xr-hyper} % now part of hyperref
 \usepackage{arydshln} %für \hdashline[5pt/2pt] % muss am Ende stehen, sonst gibt es Probleme mit xcolor
 \usepackage{hyperref} % muss am Schluss stehen
 \hypersetup{linkcolor={0 1 1}, linkbordercolor={1 1 1}, citebordercolor={1 1 1}} % setzt Linkboxen auf Farbe "`weiß"'
@@ -86,7 +87,7 @@
 %\usepackage{romannum} % Seitenzahlen in römischen Ziffern
 %\usepackage{adjustbox}
 \usepackage{scrhack}
-\usepackage[style=phys, citestyle=numeric, backend=biber]{biblatex}
+\usepackage[backend=biber]{biblatex}
 \usepackage[useregional]{datetime2}
 \usepackage{cleveref} % löscht labels!!!!!!!!!! <--- warum? habs trotzdem eingefügt weil es die referencen nice macht ohne newcommands dafür zu brauchen. außerdem steht intellisense drauf ;)
 \usepackage{isotope} % um chemische gleichungen hübscher darstellen zu können

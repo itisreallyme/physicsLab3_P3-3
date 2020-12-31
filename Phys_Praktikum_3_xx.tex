@@ -16,15 +16,17 @@
 %----------- TITEL
 \newcommand{\untertitela}{Experiment P3-3}
 % -------- Student 1
-\newcommand{\nameA}{Cihan Ünlü}
+\newcommand{\nameA}{Hunter, Dennis}
 % --------- Student 2
-\newcommand{\nameB}{Dennis Hunter}
+\newcommand{\nameB}{Kreß, Sebastian}
 % --------- Student 3, falls vorhanden
-\newcommand{\nameC}{Sebastian Kreß}
+\newcommand{\nameC}{Ünlü, Cihan}
 %::::::::::::::::::::::::::::::::::
-%\input{chapters/glossar}
 %\renewcommand\USenglishtoday
-\addbibresource{quellen_test.bib}
+\DeclareNameAlias{author}{last-first}
+\DeclareNameAlias{editor}{last-first}
+\DeclareNameAlias{translator}{last-first}
+\addbibresource{quellen.bib}
 \begin{document}%\selectlanguage{USenglish}
 %-----------------------------------------------------------------
 \input{chapters/1_deck}
@@ -44,8 +46,6 @@
 \input{chapters/8_glossar}
 \appendix
 \input{chapters/7_anhang}
-%\bibliography{Z:/Dokumente/HSRM/LaTex_Quellen/HSRM_Quellen/quellen}
 \printbibliography
-%\bibliographystyle{plaindin}
 %==========================================
 \end{document}
