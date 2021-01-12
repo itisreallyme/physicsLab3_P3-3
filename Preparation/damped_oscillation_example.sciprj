@@ -1,0 +1,133 @@
+SciDAVis 2.3.0 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+16309
+<table creation_time="2020-10-12 14:15:47:965" caption_spec="%n%C{ - }%c" name="Tabelle1" columns="4" rows="44"><comment><![CDATA[]]></comment><column creation_time="2020-10-12 14:15:47:965" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-10-12 14:19:57:453" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-10-12 14:19:57:454" caption_spec="%n%C{ - }%c" name="OutputFilter" format="f" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="2" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">1.5000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="5" invalid="no">2.5000000000000000e+00</row><row type="TypeDouble" index="6" invalid="no">3.0000000000000000e+00</row><row type="TypeDouble" index="7" invalid="no">3.5000000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">4.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="no">4.5000000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">5.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="no">5.5000000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">6.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">6.5000000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">7.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="no">7.5000000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">8.0000000000000000e+00</row><row type="TypeDouble" index="17" invalid="no">8.5000000000000000e+00</row><row type="TypeDouble" index="18" invalid="no">9.0000000000000000e+00</row><row type="TypeDouble" index="19" invalid="no">9.5000000000000000e+00</row><row type="TypeDouble" index="20" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="21" invalid="no">1.0500000000000000e+01</row><row type="TypeDouble" index="22" invalid="no">1.1000000000000000e+01</row><row type="TypeDouble" index="23" invalid="no">1.1500000000000000e+01</row><row type="TypeDouble" index="24" invalid="no">1.2000000000000000e+01</row><row type="TypeDouble" index="25" invalid="no">1.2500000000000000e+01</row><row type="TypeDouble" index="26" invalid="no">1.3000000000000000e+01</row><row type="TypeDouble" index="27" invalid="no">1.3500000000000000e+01</row><row type="TypeDouble" index="28" invalid="no">1.4000000000000000e+01</row><row type="TypeDouble" index="29" invalid="no">1.4500000000000000e+01</row><row type="TypeDouble" index="30" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="31" invalid="no">1.5500000000000000e+01</row><row type="TypeDouble" index="32" invalid="no">1.6000000000000000e+01</row><row type="TypeDouble" index="33" invalid="no">1.6500000000000000e+01</row><row type="TypeDouble" index="34" invalid="no">1.7000000000000000e+01</row><row type="TypeDouble" index="35" invalid="no">1.7500000000000000e+01</row><row type="TypeDouble" index="36" invalid="no">1.8000000000000000e+01</row><row type="TypeDouble" index="37" invalid="no">1.8500000000000000e+01</row><row type="TypeDouble" index="38" invalid="no">1.9000000000000000e+01</row><row type="TypeDouble" index="39" invalid="no">1.9500000000000000e+01</row><row type="TypeDouble" index="40" invalid="no">2.0000000000000000e+01</row><row type="TypeDouble" index="41" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="42" invalid="no">2.0000000000000000e+01</row></column><column creation_time="2020-10-12 14:15:47:965" caption_spec="%n%C{ - }%c" name="undamped" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-10-12 14:15:47:965" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-10-12 14:15:47:966" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="43">exp(-sqrt(5)*col(&quot;1&quot;))*cos(sqrt(5-5)*col(&quot;1&quot;))</formula><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">3.2692189535175792e-01</row><row type="TypeDouble" index="2" invalid="no">1.0687792566038574e-01</row><row type="TypeDouble" index="3" invalid="no">3.4940734028157588e-02</row><row type="TypeDouble" index="4" invalid="no">1.1422890993466940e-02</row><row type="TypeDouble" index="5" invalid="no">3.7343931739807368e-03</row><row type="TypeDouble" index="6" invalid="no">1.2208548944264495e-03</row><row type="TypeDouble" index="7" invalid="no">3.9912419603536513e-04</row><row type="TypeDouble" index="8" invalid="no">1.3048243864862815e-04</row><row type="TypeDouble" index="9" invalid="no">4.2657566153128978e-05</row><row type="TypeDouble" index="10" invalid="no">1.3945692377873923e-05</row><row type="TypeDouble" index="11" invalid="no">4.5591521841671057e-06</row><row type="TypeDouble" index="12" invalid="no">1.4904866732450170e-06</row><row type="TypeDouble" index="13" invalid="no">4.8727272821379720e-07</row><row type="TypeDouble" index="14" invalid="no">1.5930012386087659e-07</row><row type="TypeDouble" index="15" invalid="no">5.2078698422367476e-08</row><row type="TypeDouble" index="16" invalid="no">1.7025666795693009e-08</row><row type="TypeDouble" index="17" invalid="no">5.5660632584754583e-09</row><row type="TypeDouble" index="18" invalid="no">1.8196679501085753e-09</row><row type="TypeDouble" index="19" invalid="no">5.9488929516034241e-10</row><row type="TypeDouble" index="20" invalid="no">1.9448233589829082e-10</row><row type="TypeDouble" index="21" invalid="no">6.3580533864306565e-11</row><row type="TypeDouble" index="22" invalid="no">2.0785868638395695e-11</row><row type="TypeDouble" index="23" invalid="no">6.7953555717969710e-12</row><row type="TypeDouble" index="24" invalid="no">2.2215505231209985e-12</row><row type="TypeDouble" index="25" invalid="no">7.2627350763840731e-13</row><row type="TypeDouble" index="26" invalid="no">2.3743471166091713e-13</row><row type="TypeDouble" index="27" invalid="no">7.7622605958485014e-14</row><row type="TypeDouble" index="28" invalid="no">2.5376529462090622e-14</row><row type="TypeDouble" index="29" invalid="no">8.2961431091964065e-15</row><row type="TypeDouble" index="30" invalid="no">2.7121908293679002e-15</row><row type="TypeDouble" index="31" invalid="no">8.8667456649261174e-16</row><row type="TypeDouble" index="32" invalid="no">2.8987332983796344e-16</row><row type="TypeDouble" index="33" invalid="no">9.4765938402552452e-17</row><row type="TypeDouble" index="34" invalid="no">3.0981060197350442e-17</row><row type="TypeDouble" index="35" invalid="no">1.0128386919724659e-17</row><row type="TypeDouble" index="36" invalid="no">3.3111914486523442e-18</row><row type="TypeDouble" index="37" invalid="no">1.0825009842659592e-18</row><row type="TypeDouble" index="38" invalid="no">3.5389327349636894e-19</row><row type="TypeDouble" index="39" invalid="no">1.1569545972367117e-19</row><row type="TypeDouble" index="40" invalid="no">3.7823378976455612e-20</row><row type="TypeDouble" index="41" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="42" invalid="no">3.7823378976455612e-20</row><row type="TypeDouble" index="43" invalid="no">1.0000000000000000e+00</row></column><column creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="underdamped" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="43">exp(-sqrt(1)*col(&quot;1&quot;))*cos(sqrt(5-1)*col(&quot;1&quot;))</formula><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">3.2770991402245986e-01</row><row type="TypeDouble" index="2" invalid="no">-1.5309186567422631e-01</row><row type="TypeDouble" index="3" invalid="no">-2.2089718431220126e-01</row><row type="TypeDouble" index="4" invalid="no">-8.8461044565382008e-02</row><row type="TypeDouble" index="5" invalid="no">2.3284410103401054e-02</row><row type="TypeDouble" index="6" invalid="no">4.7804063706253293e-02</row><row type="TypeDouble" index="7" invalid="no">2.2765875437355053e-02</row><row type="TypeDouble" index="8" invalid="no">-2.6649260775371800e-03</row><row type="TypeDouble" index="9" invalid="no">-1.0121742925164682e-02</row><row type="TypeDouble" index="10" invalid="no">-5.6536194913587370e-03</row><row type="TypeDouble" index="11" invalid="no">1.8086816132833833e-05</row><row type="TypeDouble" index="12" invalid="no">2.0917048369966883e-03</row><row type="TypeDouble" index="13" invalid="no">1.3642910567735784e-03</row><row type="TypeDouble" index="14" invalid="no">1.2468820330381611e-04</row><row type="TypeDouble" index="15" invalid="no">-4.2017151079244350e-04</row><row type="TypeDouble" index="16" invalid="no">-3.2125896590503645e-04</row><row type="TypeDouble" index="17" invalid="no">-5.5987035604882952e-05</row><row type="TypeDouble" index="18" invalid="no">8.1489555599563080e-05</row><row type="TypeDouble" index="19" invalid="no">7.4006349889692532e-05</row><row type="TypeDouble" index="20" invalid="no">1.8526896943657996e-05</row><row type="TypeDouble" index="21" invalid="no">-1.5082519031540046e-05</row><row type="TypeDouble" index="22" invalid="no">-1.6701046524410014e-05</row><row type="TypeDouble" index="23" invalid="no">-5.3976483684184172e-06</row><row type="TypeDouble" index="24" invalid="no">2.6062458969024744e-06</row><row type="TypeDouble" index="25" invalid="no">3.6938691030043120e-06</row><row type="TypeDouble" index="26" invalid="no">1.4622507682036812e-06</row><row type="TypeDouble" index="27" invalid="no">-4.0051035431907487e-07</row><row type="TypeDouble" index="28" invalid="no">-8.0043442301730036e-07</row><row type="TypeDouble" index="29" invalid="no">-3.7728106656495579e-07</row><row type="TypeDouble" index="30" invalid="no">4.7185876461383052e-08</row><row type="TypeDouble" index="31" invalid="no">1.6972050696895021e-07</row><row type="TypeDouble" index="32" invalid="no">9.3879471629487614e-08</row><row type="TypeDouble" index="33" invalid="no">-9.0621810672459386e-10</row><row type="TypeDouble" index="34" invalid="no">-3.5130280876206808e-08</row><row type="TypeDouble" index="35" invalid="no">-2.2691703640371907e-08</row><row type="TypeDouble" index="36" invalid="no">-1.9488844010840667e-09</row><row type="TypeDouble" index="37" invalid="no">7.0704737754100556e-09</row><row type="TypeDouble" index="38" invalid="no">5.3510832104539205e-09</row><row type="TypeDouble" index="39" invalid="no">9.0612409633457569e-10</row><row type="TypeDouble" index="40" invalid="no">-1.3746618017167098e-09</row><row type="TypeDouble" index="41" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="42" invalid="no">-1.3746618017167098e-09</row><row type="TypeDouble" index="43" invalid="no">1.0000000000000000e+00</row></column><column creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-10-12 14:22:57:205" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="43">exp(-sqrt(10)*col(&quot;1&quot;))*cos(i*sqrt(10-5)*col(&quot;1&quot;))</formula><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">-1.2699812967140517e-01</row><row type="TypeDouble" index="2" invalid="no">3.8563233534022336e-02</row><row type="TypeDouble" index="3" invalid="no">5.7474449681477798e-03</row><row type="TypeDouble" index="4" invalid="no">-1.6708130525589697e-03</row><row type="TypeDouble" index="5" invalid="no">-1.9403120709067688e-04</row><row type="TypeDouble" index="6" invalid="no">-7.4795540957982407e-05</row><row type="TypeDouble" index="7" invalid="no">1.5221409999860763e-05</row><row type="TypeDouble" index="8" invalid="no">1.2141293355429669e-06</row><row type="TypeDouble" index="9" invalid="no">6.5771367950433881e-07</row><row type="TypeDouble" index="10" invalid="no">-1.2167023269071243e-07</row><row type="TypeDouble" index="11" invalid="no">-2.7881707772288007e-08</row><row type="TypeDouble" index="12" invalid="no">3.1569995611101948e-10</row><row type="TypeDouble" index="13" invalid="no">-8.8870485854468519e-10</row><row type="TypeDouble" index="14" invalid="no">-1.6391001935330825e-10</row><row type="TypeDouble" index="15" invalid="no">-1.3748662958469077e-11</row><row type="TypeDouble" index="16" invalid="no">-8.3327418362263310e-12</row><row type="TypeDouble" index="17" invalid="no">-2.0160514882414593e-12</row><row type="TypeDouble" index="18" invalid="no">2.6890539185511802e-13</row><row type="TypeDouble" index="19" invalid="no">-6.6411385494743471e-14</row><row type="TypeDouble" index="20" invalid="no">-1.7301766406622967e-15</row><row type="TypeDouble" index="21" invalid="no">9.7782928525435191e-16</row><row type="TypeDouble" index="22" invalid="no">7.5957378674765245e-16</row><row type="TypeDouble" index="23" invalid="no">2.6923131539223277e-17</row><row type="TypeDouble" index="24" invalid="no">2.9859078218870243e-18</row><row type="TypeDouble" index="25" invalid="no">-3.5965866806144584e-18</row><row type="TypeDouble" index="26" invalid="no">1.2025525495486719e-18</row><row type="TypeDouble" index="27" invalid="no">-2.8513116018395577e-19</row><row type="TypeDouble" index="28" invalid="no">-5.9113366461071627e-20</row><row type="TypeDouble" index="29" invalid="no">4.3727445849912967e-21</row><row type="TypeDouble" index="30" invalid="no">-2.4981472134862877e-21</row><row type="TypeDouble" index="31" invalid="no">-5.1334499215306287e-22</row><row type="TypeDouble" index="32" invalid="no">8.7976846475721631e-23</row><row type="TypeDouble" index="33" invalid="no">-1.2913741078273341e-23</row><row type="TypeDouble" index="34" invalid="no">-1.8176038381524113e-26</row><row type="TypeDouble" index="35" invalid="no">2.5698095406755820e-25</row><row type="TypeDouble" index="36" invalid="no">1.8926217392561835e-25</row><row type="TypeDouble" index="37" invalid="no">1.5657548950456515e-26</row><row type="TypeDouble" index="38" invalid="no">-2.1004678442280949e-27</row><row type="TypeDouble" index="39" invalid="no">-1.4139415766377054e-27</row><row type="TypeDouble" index="40" invalid="no">1.5031155946177560e-28</row><row type="TypeDouble" index="41" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="42" invalid="no">3.1872461954583413e-28</row><row type="TypeDouble" index="43" invalid="no">1.0000000000000000e+00</row></column><column_width column="0">144</column_width><column_width column="1">120</column_width><column_width column="2">120</column_width><column_width column="3">120</column_width></table>
+geometry	0	0	1392	930	
+
+</table>
+<multiLayer>
+Grafik2	1	1	10.12.2020 14:25
+geometry	455	11	1715	988	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	418	254
+Alignement	0	0
+<graph>
+ggeometry	15	12	1663	893
+PlotTitle	Comparison of different damping ratios δ/ω	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	X-Achsentitel	Y-Achsentitel			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	5124	4	5124	4
+TitleFont	MS Shell Dlg 2	28	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	22	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	22	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	22	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	22	75	0	0	0
+AxisFont0	MS Shell Dlg 2	22	50	0	0	0
+AxisFont1	MS Shell Dlg 2	22	50	0	0	0
+AxisFont2	MS Shell Dlg 2	22	50	0	0	0
+AxisFont3	MS Shell Dlg 2	22	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Tabelle1_1	Tabelle1_undamped	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	14	1	0	64		2	0	0	43	1
+curve	Tabelle1_1	Tabelle1_underdamped	1	0	#ffff0000	0	1	7	2	#ffff0000	#ffff0000	0	#ff000000	14	1	0	64		2	0	0	43	1
+curve	Tabelle1_1	Tabelle1_4	1	0	#ff00ff00	0	1	7	3	#ff00ff00	#ff00ff00	0	#ff000000	14	1	0	64		2	0	0	43	1
+scale	0	-0.5	1.5	0	6	5	0	0
+scale	1	-0.5	1.5	0	8	5	0	0
+scale	2	-5	25	0	7	5	0	0
+scale	3	-5	25	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	12.0948616600791	1.40896551724138	MS Shell Dlg 2	22	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Critically damped δ = ω	\c{2}Overdamped δ > ω	\c{3}Underdamped δ < ω	</legend>
+</graph>
+</multiLayer>
+<log>
+[10.12.2020 14:22	Diagramm: ''Grafik1'']
+Nichtlinear Anpassung an den Datensatz: Tabelle1_2, unter Benutzung der Funktion: exp(-a*x)*cos(b*x)
+Y Standardfehler: Unbekannt
+Skalierter Levenberg-Marquardt Algorithmus mit Toleranz = 0,0001
+Von x = 0 bis x = 20
+a  = 5 +/- 0
+b  = 5 +/- 0
+--------------------------------------------------------------------------------------
+Chi^2 = 0
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterationen = 0
+Status = success
+---------------------------------------------------------------------------------------
+[10.12.2020 14:26	Diagramm: ''Grafik2'']
+Nichtlinear Anpassung an den Datensatz: Tabelle1_2, unter Benutzung der Funktion: exp(-a*x)*cos(b*x)
+Y Standardfehler: Unbekannt
+Skalierter Levenberg-Marquardt Algorithmus mit Toleranz = 0,0001
+Von x = 0 bis x = 20
+a  = 4,99999999999997 +/- 1,71883592908858e-14
+b  = -7,56637061435918 +/- 2,22801552806494e-14
+--------------------------------------------------------------------------------------
+Chi^2 = 5,21271898906612e-31
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterationen = 16
+Status = success
+---------------------------------------------------------------------------------------
+[10.12.2020 14:26	Diagramm: ''Grafik2'']
+Nichtlinear Anpassung an den Datensatz: Tabelle1_3, unter Benutzung der Funktion: exp(-a*x)*cos(b*x)
+Y Standardfehler: Unbekannt
+Skalierter Levenberg-Marquardt Algorithmus mit Toleranz = 0,0001
+Von x = 0 bis x = 20
+a  = 0,499999991108572 +/- 1,96820384916419e-09
+b  = -7,56637060584525 +/- 1,88466390251474e-09
+--------------------------------------------------------------------------------------
+Chi^2 = 2,96274371528339e-16
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterationen = 7
+Status = success
+---------------------------------------------------------------------------------------
+[10.12.2020 14:26	Diagramm: ''Grafik2'']
+Nichtlinear Anpassung an den Datensatz: Tabelle1_4, unter Benutzung der Funktion: exp(-a*x)*cos(b*x)
+Y Standardfehler: Unbekannt
+Skalierter Levenberg-Marquardt Algorithmus mit Toleranz = 0,0001
+Von x = 0 bis x = 20
+a  = 10,0000000000674 +/- 8,44456372697203e-10
+b  = -7,56637061438916 +/- 1,1301793854923e-09
+--------------------------------------------------------------------------------------
+Chi^2 = 5,87809160369988e-26
+R^2 = 1
+---------------------------------------------------------------------------------------
+Iterationen = 17
+Status = success
+---------------------------------------------------------------------------------------
+[10.12.2020 14:43	Diagramm: ''Grafik2'']
+Nichtlinear Anpassung an den Datensatz: Tabelle1_undamped, unter Benutzung der Funktion: exp(-sqrt(a)*x)*cos(sqrt(b-a)*x)
+Y Standardfehler: Unbekannt
+Skalierter Levenberg-Marquardt Algorithmus mit Toleranz = 0,0001
+Von x = 0 bis x = 20
+a  = 1 +/- nan
+b  = 1 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = 0,206982575190562
+R^2 = 0,806034829592974
+---------------------------------------------------------------------------------------
+Iterationen = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+</log>

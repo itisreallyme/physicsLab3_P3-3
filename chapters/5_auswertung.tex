@@ -1,1 +1,245 @@
 \chapter{Evaluation}
+
+\section{Angular Sensor}
+    Before investigating the dependence of the angle and the timer ticks, it is needed to determine the mean value of the timer
+    ticks for each angle. 20 values are included each.
+    %
+    \begin{align*}
+        \bar{n}_{+90\SIUnitSymbolDegree}    &=601.34    &\bar{n}_{0\SIUnitSymbolDegree}=14.36   &&\bar{n}_{-90\SIUnitSymbolDegree}=-499.79\\
+        \bar{n}_{+80\SIUnitSymbolDegree}    &=549.63    &                                       &&\bar{n}_{-80\SIUnitSymbolDegree}=-474.44\\
+        \bar{n}_{+70\SIUnitSymbolDegree}    &=482.26    &                                       &&\bar{n}_{-70\SIUnitSymbolDegree}=-459.46\\
+        \bar{n}_{+60\SIUnitSymbolDegree}    &=421.93    &                                       &&\bar{n}_{-60\SIUnitSymbolDegree}=-396.87\\
+        \bar{n}_{+50\SIUnitSymbolDegree}    &=353.10    &                                       &&\bar{n}_{-50\SIUnitSymbolDegree}=-331.20\\
+        \bar{n}_{+40\SIUnitSymbolDegree}    &=288.13    &                                       &&\bar{n}_{-40\SIUnitSymbolDegree}=-262.31\\
+        \bar{n}_{+30\SIUnitSymbolDegree}    &=220.58    &                                       &&\bar{n}_{-30\SIUnitSymbolDegree}=-195.80\\
+        \bar{n}_{+20\SIUnitSymbolDegree}    &=147.85    &                                       &&\bar{n}_{-20\SIUnitSymbolDegree}=-126.04\\
+        \bar{n}_{+10\SIUnitSymbolDegree}    &=83.57     &                                       &&\bar{n}_{-10\SIUnitSymbolDegree}=-55.33\\
+    \end{align*}
+    %
+    In \cref{fig:angular-sensor} the timer ticks $ n $ are plotted as a function of the angle $ \varphi $.
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{"messdaten/Angular Sensor"}
+        \caption[Curve of the angular sensor]{Curve of the angular sensor}
+        \label{fig:angular-sensor}
+    \end{figure}
+    %
+    The sensitivity corresponds to the slope of the curve and the offset to the intercept.\par
+    The computed fit is
+    %
+    \begin{equation}
+        n(\varphi)=\SI{373.60}{rad^{-1}}\cdot\varphi +19.03
+    \end{equation}
+    %
+    which gives values for the sensitivity \( s \) and the offset \( o \) of
+    %
+    \begin{align}
+        s&=\SI{374}{rad^{-1}} \pm \SI{1}{rad^{-1}}\\
+        o&=19 \pm 1
+    \end{align}
+    %
+    [comparison]
+
+\section{Torsional Pendulum}
+
+    \subsection{Natural Angular Frequency And Damping Coefficient}
+        \Cref{fig:damped-oscillation-100mA} shows the oscillation with a coil current of \SI{100}{mA}. The respective plots
+        for coil currents ranging from \SI{200-500}{mA} and the coil current turned off can be seen in \cref{fig:damped-oscillations}.
+        Deflection is plotted versus time. The period time for each curve is determined by reading a few values and building the mean.\par
+        %
+        \begin{figure}[H]%
+            \centering
+            \includegraphics[width=1\linewidth]{"messdaten/Damped Oscillation (100mA)"}
+            \caption[Course of the tick rate at $ I_{c}=\SI{100}{mA} $]{Plot of the tick rate over time with a coil current of \SI{100}{mA}.}
+            \label{fig:damped-oscillation-100mA}
+        \end{figure}
+        %
+        The values are as follows:\par
+        \begin{table}[h]
+            \centering
+            \caption[Period times for the damped oscillations]{}
+            \begin{tabular}{@{}llll@{}}
+                \toprule
+                \( T_0 \)       &$\SI{9.7}{s} \pm \SI{0.5}{s}$    &\hspace{10mm}\(T_{300}\)      &$\SI{9.8}{s} \pm \SI{0.5}{s}$\\
+                \( T_{100} \)   &$\SI{9.6}{s} \pm \SI{0.5}{s}$    &\hspace{10mm}\(T_{400}\)      &$\SI{10.0}{s} \pm \SI{0.5}{s}$\\
+                \(T_{200}\)     &$\SI{9.6}{s} \pm \SI{0.5}{s}$    &\hspace{10mm}\(T_{500}\)      &$\SI{9.8}{s} \pm \SI{0.5}{s}$\\
+                \bottomrule
+            \end{tabular}
+            \label{tab:period_times_damped_oscillations}
+        \end{table}
+        %
+        Thus, the damped natural frequencies are calculated using $ \omega=\frac{2\pi}{T} $:\par
+        \begin{table}[h]
+            \centering
+            \caption[Damped natural frequencies]{}
+            \begin{tabular}{@{}llll@{}}
+                \toprule
+                $\omega_{d,0}$      &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{d,300}$  &$\SI{0.64}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                $\omega_{d,100}$    &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{d,400}$  &$\SI{0.63}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                $\omega_{d,200}$    &$\SI{0.64}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{d,500}$  &$\SI{0.64}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                \bottomrule
+            \end{tabular}
+            \label{tab:damped_natural_frequencies}
+        \end{table}
+        %
+        The deviations of the period time are reading errors. The ones of the damped natural frequency can be calculated with\par
+        %
+        \begin{align}
+            \Delta \omega_d &=\left|\frac{\partial \omega_d}{\partial T}\right| \cdot \Delta T \nonumber \\
+                            &=\frac{2\pi}{T^2}\cdot \Delta T
+        \end{align}
+        %
+        for $ \omega_{d,0} $ e.g.:\par
+        %
+        \begin{align}
+            \Delta\omega_{d,0}  &=\frac{2\pi}{(\SI{9.7}{s})^2}\cdot \SI{0.5}{s} \nonumber \\
+                                &=\SI{0.03}{s^{-1}}
+        \end{align}
+        %
+        The damping coefficient can be determined by way of\par
+        %
+        \begin{align}
+            \varphi_1 \cdot e^{-\delta t_0} &=\varphi_0 \cdot e^{-\delta t_1}   &&\Bigg|\cdot \frac{e^{\delta t_1}}{\varphi_1} \nonumber\\
+            e^{\delta(t_1-t_0)}             &=\frac{\varphi_0}{\varphi_1}       &&\Bigg|\ln \nonumber\\
+            \delta(t_1-t_0)                 &=\ln{\frac{\varphi_0}{\varphi_1}}  &&\Bigg|\cdot \frac{1}{(t_1-t_0)} \nonumber\\
+            \delta                          &=\frac{1}{(t_1-t_0)}\cdot\ln{\frac{\varphi_0}{\varphi_1}}
+        \end{align}
+        %
+        The times and angles have been read and $\delta$ has been calculated individually.\par
+        This gives us the following mean values:\par
+        %
+        \begin{table}[h]
+            \centering
+            \caption[Mean values of the dampening coefficient]{}
+            \begin{tabular}{@{}llll@{}}
+                \toprule
+                $\delta_0$        &$\SI{0.002}{s^{-1}} \pm \SI{0.001}{s^{-1}}$  &\hspace{10mm}$\delta_{300}$ &$\SI{0.08}{s^{-1}} \pm \SI{0.01}{s^{-1}}$\\
+                $\delta_{100}$    &$\SI{0.008}{s^{-1}} \pm \SI{0.002}{s^{-1}}$  &\hspace{10mm}$\delta_{400}$ &$\SI{0.12}{s^{-1}} \pm \SI{0.01}{s^{-1}}$\\
+                $\delta_{200}$    &$\SI{0.03}{s^{-1}} \pm \SI{0.01}{s^{-1}}$    &\hspace{10mm}$\delta_{500}$ &$\SI{0.17}{s^{-1}} \pm \SI{0.01}{s^{-1}}$\\
+                \bottomrule
+            \end{tabular}
+            \label{tab:dampening_coefficients}
+        \end{table}
+        %
+        For the deviation, the standard deviation is used. Otherwise, it can also be determined by means of the partial derivation:\par
+        %
+        \begin{align}
+            \Delta\delta    &= \left| \frac{\partial\delta}{\partial t_1} \right| \cdot \Delta t_1 + \left| \frac{\partial\delta}{\partial t_0} \right| \cdot \Delta t_0 + \left| \frac{\partial\delta}{\partial \varphi_0} \right| \cdot \Delta \varphi_0 + \left| \frac{\partial\delta}{\partial \varphi_1} \right| \cdot \Delta \varphi_1 \nonumber\\
+                            &= \frac{1}{(t_1-t_0)^2} \cdot \ln{\frac{\varphi_0}{\varphi_1}} \cdot (\Delta t_0 + \Delta t_1) + \frac{1}{(t_1-t_0)} \cdot \left( \frac{1}{\varphi_0} \cdot \Delta\varphi_0 + \frac{1}{\varphi_1} \cdot \Delta\varphi_1 \right)
+        \end{align}
+        %
+        The natural angular frequencies are calculated via $ \omega_0=\sqrt{\omega_d^2+\delta^2} $ as\par
+        %
+        \begin{table}[h]
+            \centering
+            \caption[Angular natural frequencies]{}
+            \begin{tabular}{@{}llll@{}}
+                \toprule
+                $\omega_{0,0}$      &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{0,300}$   &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                $\omega_{0,100}$    &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{0,400}$   &$\SI{0.66}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                $\omega_{0,200}$    &$\SI{0.65}{s^{-1}} \pm \SI{0.03}{s^{-1}}$  &\hspace{10mm}$\omega_{0,500}$   &$\SI{0.67}{s^{-1}} \pm \SI{0.03}{s^{-1}}$\\
+                \bottomrule
+            \end{tabular}
+            \label{tab:angular_natural_frequencies}
+        \end{table}
+        %
+        and their deviations via\par
+        %
+        \begin{align}
+            \Delta\omega_0  &=\left| \frac{\partial\omega_0}{\partial\omega_d} \right| \cdot \Delta\omega_0 + \left| \frac{\partial\omega_0}{\partial\delta} \right| \cdot \Delta\delta \nonumber\\
+                            &=\frac{\omega_d}{\sqrt{\omega_d^2+\delta^2}} \cdot \Delta\omega_d + \frac{\delta}{\sqrt{\omega_d^2+\delta^2}} \cdot \Delta\delta
+        \end{align}
+        %
+        for $ \omega_{0,0} $ e.g. as\par
+        %
+        \begin{align*}
+            \Delta\omega_{0,0}  &=\frac{\SI{0.65}{s^{-1}}}{\sqrt{\SI{0.65}{s^{-1}}+\SI{0.002}{s^{-1}}}} \cdot \SI{0.03}{s^{-1}} + \frac{\SI{0.002}{s^{-1}}}{\sqrt{\SI{0.65}{s^{-1}}+\SI{0.002}{s^{-1}}}} \cdot \SI{0.001}{s^{-1}}\\
+                                &=\SI{0.03}{s^{-1}}+\SI{3}{\cdot10^{-6}s^{-1}}\\
+                                &\approx\SI{0.03}{s^{-1}}
+        \end{align*}
+        %
+        In \cref{fig:damping-coefficient} the damping coefficient is plotted versus coil current. For finding a formula
+        $ \delta(I) $ SciDAVis did an exponential fit $ \delta_e(I) $ (red curve) and a fourth degree polynomial fit
+        $ \delta_p(I) $ (blue curve):\par
+        %
+        \begin{align}
+            \delta_e(I)=&\SI{0.013}{s^{-1}}\cdot e^{\SI{0.0052}{A^{-1}}\cdot I}\\
+            \delta_p(I)=&\SI{1.8}{\cdot 10^{-3}s^{-1}} - \SI{1.5}{\cdot 10^{-5}s^{-1}A^{-1}}\cdot I + \SI{6.4}{\cdot 10^{-7}s^{-1}A^{-2}}\cdot I^2 \nonumber\\
+                        &+ \SI{1.2}{\cdot 10^{-9}s^{-1}A^{-3}}\cdot I^3 + \SI{2.2}{\cdot 10^{-12}s^{-1}A^{-4}}\cdot I^4
+        \end{align}
+        %
+        \begin{figure}
+            \centering
+            \includegraphics[width=1\linewidth]{"messdaten/Damping Coefficient"}
+            \caption[Damping coefficient depending on the coil current]{Damping coefficient depending on the coil current}
+            \label{fig:damping-coefficient}
+        \end{figure}
+        %
+        As it can be seen, the polynomial fit is a better approximation than the exponential. However, the polynomial curve
+        is only a good approach in the area of $ 0 \leq I \leq \SI{500}{mA} $. At higher $ I $- values the curve has a maximum
+        and goes lower again, which is illogical in the physical sense. Therefore, the exponential curve is a qualitatively
+        better description of the dependency.\par\medskip
+        Finally, the aperiodic case is considered and plotted in \cref{fig:damped-oscillation-aperiodic}.\par
+        %
+        \begin{figure}
+            \centering
+            \includegraphics[width=1\linewidth]{"messdaten/Damped Oscillation (aperiodic)"}
+            \caption[Aperiodic damped oscillation at $ I_c=\SI{1.3}{A} $]{Aperiodic damped oscillation at $ I_c=\SI{1.3}{A} $}
+            \label{fig:damped-oscillation-aperiodic}
+        \end{figure}
+        %
+    \subsection{Rotational Inertia}
+        To determine the unknown rotational inertia of the pendulum, the dimensions of each of the three rods must first be measured
+        as it can be seen in \cref{rod dimensions}.\par
+        %
+        \begin{table}[H]
+            \centering
+            \caption{rod dimensions}
+            \label{rod dimensions}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                i & $ m_{Ri} / \SI{}{g} $ & $ D_{Ri} / \SI{}{mm} $ & $ l_{Ri} / \SI{}{mm} $ \\
+                \hline
+                \hline
+                1 & 8.89 $\pm$ 0.01 & 5.95 $\pm$ 0.05 & 120 $\pm$ 0.05 \\
+                \hline
+                2 & 26.73 $\pm$ 0.01 & 6.00 $\pm$ 0.05 & 120 $\pm$ 0.05 \\
+                \hline
+                3 & 56.38 $\pm$ 0.01 & 6.00 $\pm$ 0.05 & 240 $\pm$ 0.5 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        %
+        Obviously, the diameters all are much much smaller than the lengths. Hence, the rotational rod inertia can be calculated
+        by means of eq. (1.16).\par
+        The following values are obtained:\par
+        %
+        \begin{align}
+            J_{R1}  &=\SI{10670}{g\cdot mm^2} \pm \SI{21}{g\cdot mm^2}\\
+            J_{R2}  &=\SI{32080}{g\cdot mm^2} \pm \SI{39}{g\cdot mm^2}\\
+            J_{R3}  &=\SI{270600}{g\cdot mm^2} \pm \SI{1200}{g\cdot mm^2}
+        \end{align}
+        %
+        The deviations of the rod dimensions are reading errors of the scales. The deviations of the rod inertia can be determined by way of:\par
+        %
+        \begin{align}
+            \Delta J_{Ri}   &=\left| \frac{\partial J_{Ri}}{\partial m_{Ri}} \right| \cdot \Delta m_{Ri} + \left| \frac{\partial J_{Ri}}{\partial l_{Ri}} \right| \cdot \Delta l_{Ri} \nonumber\\
+                            &=\frac{1}{12}\cdot l_{Ri}^2\cdot \Delta m_{Ri} + \frac{1}{6}\cdot m_{Ri}\cdot l_{Ri}\cdot \Delta l_{Ri}
+        \end{align}
+        %
+        For $ J_{R2} $ it is e.g.:\par
+        %
+        \begin{align*}
+            \Delta J_{R2}   &=\frac{1}{12}\cdot (\SI{120}{mm})^2\cdot \SI{0.01}{g} + \frac{1}{6}\cdot \SI{26.73}{g}\cdot \SI{120}{mm}\cdot \SI{0.05}{mm}\\
+                            &=\SI{12}{g\cdot mm^2}+\SI{26.73}{g\cdot mm^2}\\
+                            &=\SI{38.73}{g\cdot mm^2} \approx \SI{39}{g\cdot mm^2}
+        \end{align*}
+        %
+        The mean values of the period times read with reading errors are as follows:\par
+        %
+        \begin{align}
+            T_1 &=\SI{9.7}{s} \pm \SI{0.3}{s} \\
+            T_2 &= \\
+            T_3 &=\SI{11.3}{s} \pm \SI{0.3}{s}
+        \end{align}

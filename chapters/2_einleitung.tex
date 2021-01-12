@@ -3,14 +3,14 @@
 \section{Terms and Definitions}
     \subsection*{Free Harmonic and Damped Oscillation}
         If a system capable of oscillation is deflected out of its equilibrium position and is experiencing a restoring force
-        proportional to its deflection this system is called an \textit{harmonic oscillator}. If a dampening force such as friction
+        proportional to its deflection this system is called a \textit{harmonic oscillator}. If a dampening force such as friction
         is introduced, the system no longer oscillates freely but rather damped.\par
         Both, damped and harmonic oscillations are considered \textit{free} if there is no continuous, the oscillation driving
         stimulus present.
         %
     \subsection*{Natural Angular Frequency of a Harmonic Oscillation}
         %
-        Depending of the very characteristics of the given system it will oscillate at a distinct frequency - the natural angular
+        Depending on the very characteristics of the given system it will oscillate at a distinct frequency - the natural angular
         frequency \( \omega_0 \).
     \subsection*{Differential Equation of the Damped Harmonic Oscillation}
         \begin{equation}
@@ -29,7 +29,7 @@
         %
     \subsection*{Eddy Current Brake}
         The equivalent circuit of a conductor exposed to a changing magnetic field is composed of only a voltage source
-        and a resistor. The voltage across the this resistor is induced as of the law of electromagnetic induction: \(U_{ind} = -NA\frac{\partial B}{\partial t}\).
+        and a resistor. The voltage across this resistor is induced as of the law of electromagnetic induction: \(U_{ind} = -NA\frac{\partial B}{\partial t}\).
         The resulting current creates a magnetic field opposing the inducing field.
         % Eddy currents are created when a conductor passes through a magnetic field, which creates opposing forces that spin
         % inside the conductor. According to Lenz’s law, an eddy current produces a magnetic field that is in opposition
@@ -37,7 +37,7 @@
         %
     \subsection*{Constant Current Constant Voltage Operation of a PSU}
         As the name implies a power supply in CC/CV operation mode keeps the output current and output voltage constant
-        indipendently from the load applied.
+        independently of the load applied.
         % In constant voltage mode, which is sometimes referred to as voltage-controlled mode, a power supply behaves like
         % a voltage source, holding the voltage across the output terminals constant while the current output varies,
         % depending on load conditions. Constant current mode is essentially the opposite of constant voltage mode. In
@@ -53,7 +53,7 @@
     %
 \section{Preparation}
 %
-    \subsection*{Deriving the Equation for Damped Free Oscillation}\label{sec:preparation_task_1}
+    \subsection{Deriving the Equation for Damped Free Oscillation}\label{sec:preparation_task_1}
         %
         \begin{equation}
             \vec{M}_{ Inert } + \vec{M}_{ Frict } + \vec{ M}_{ Rest } = 0 \quad \Leftrightarrow \quad J \cdot \ddot\varphi(t) - k \cdot \dot\varphi(t) - D^* \cdot \varphi(t) = 0
@@ -73,7 +73,7 @@
         \begin{equation}
             \varphi(t) = \hat{\varphi} e^{\lambda t}, \quad \dot{\varphi}(t) = \lambda \hat{\varphi} e^{\lambda t}, \quad \ddot{\varphi}(t) = \lambda^2 \hat{\varphi} e^{\lambda t}
         \end{equation}
-        Pluged into \cref{eq:dampedOscillation} gives
+        Plugged into \cref{eq:dampedOscillation} gives
         \begin{align}
             \left(\lambda^2 + 2\delta \lambda + \omega_0^2\right) \hat{\varphi}e^{\lambda t} = 0 \nonumber \\
             \lambda_{1,2} = -\delta \pm \sqrt{\delta^2-\omega_0^2} \nonumber \\
@@ -85,17 +85,27 @@
                     -\delta \pm i\omega_d \qquad \text{for} \qquad \delta^2 < \omega_0^2 \quad \text{(a)}\\
                     -\delta \pm \omega_d \qquad \text{for} \qquad \delta^2 \geq \omega_0^2 \quad \text{(b)}
             \end{cases}
-            \end{equation}
-            In \cref{eq:dampedOscillation}:
-            \begin{equation}
-                \varphi_1(t) = \varphi_1 e^{-\delta + i\omega_d t}, \quad \varphi_2(t) = \varphi_2 e^{-\delta - i\omega_d t}
-            \end{equation}
-            Linear combination of \( \varphi_1(t) \) and \( \varphi_2(t) \) lastly leads to
-            \begin{equation}
-                \varphi(t) = \varphi_1 e^{-\delta + i\omega_d t} + \varphi_2 e^{-\delta - i\omega_d t} = \hat{\varphi}e^{-\delta t} \cdot \cos{\left( \omega_d t + \varphi_0 \right)}
-            \end{equation}
-            %
-    \subsection*{Unknown Angular Inertia of the Pendulum}\label{sec:preparation_task_3}
+        \end{equation}
+        In \cref{eq:dampedOscillation}:
+        \begin{equation}
+            \varphi_1(t) = \varphi_1 e^{-\delta + i\omega_d t}, \quad \varphi_2(t) = \varphi_2 e^{-\delta - i\omega_d t}
+        \end{equation}
+        Linear combination of \( \varphi_1(t) \) and \( \varphi_2(t) \) lastly leads to
+        \begin{equation}
+            \varphi(t) = \varphi_1 e^{-\delta + i\omega_d t} + \varphi_2 e^{-\delta - i\omega_d t} = \hat{\varphi}e^{-\delta t} \cdot \cos{\left( \omega_d t + \varphi_0 \right)}
+        \end{equation}
+        %
+    \subsection{Damping Cases}\label{sec:preparation_task_2}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\textwidth]{Preparation/damping_cases.png}
+        \caption[Damping cases of a harmonic oscillation]{Plot of amplitude against time of a harmonic oscillation with
+        parameterized damping coefficient. Orange: underdamped, Gray: overdamped, Blue: critically damped.}
+        \label{fig:damping_cases_prepTask_2}
+    \end{figure}
+    %
+    \subsection{Unknown Angular Inertia of the Pendulum}\label{sec:preparation_task_3}
     %
         The angular inertia of the pendulum \( J_P \) can be determined by adding a known angular inertia \( J_R \) of a cylindrical rod. As \cref{eq:DEParameters} delivers
         %
@@ -121,12 +131,12 @@
         %
         The angular inertia of the pendulum can be calculated without knowing the torsion constant \( D^* \).
         %
-    \subsection*{Rotational Inertia of a Cylindrical Rod}\label{sec:preparation_task_4}
+    \subsection{Rotational Inertia of a Cylindrical Rod}\label{sec:preparation_task_4}
         %
         \begin{figure}[h]
             \centering
             \includegraphics[width=.6\textwidth]{Preparation/rotating_rod.jpg}
-            \caption[Rotating rod]{Scheme of a orthogonally to its center axis rotating rod.}
+            \caption[Rotating rod]{Scheme of an orthogonally to its center axis rotating rod.}
             \label{fig:rotationalIntertia_of_Cyl}
         \end{figure}
         %
@@ -147,7 +157,7 @@
             J_Z = \int_{-\nicefrac{L}{2}}^{\nicefrac{L}{2}} \frac{M}{L} x^2 dx = \frac{1}{12}M L^2
         \end{equation}
         %
-    \subsection*{Equations for the Sensor Capacitances}\label{sec:preparation_task_5}
+    \subsection{Equations for the Sensor Capacitances}\label{sec:preparation_task_5}
         To derive:
         \begin{align}
             C_1(\varphi) = \varepsilon_0 \frac{\pi D^2}{16 d} \left( 1 - \frac{2\varphi}{\pi} \right) \\
@@ -183,10 +193,10 @@
             \label{eq:angularDependencyOfTheArea}
         \end{align}
         Say the zero position is chosen such as the whole area of the rotor takes effect (see \cref{subfig:rotorAt0})
-        \cref{eq:angularDependencyOfTheArea} maximizes. Thus the absolute capacitance of one of the capacitors is maximized.
+        \cref{eq:angularDependencyOfTheArea} maximizes. Thus, the absolute capacitance of one of the capacitors is maximized.
         Stepping the rotor about \( \varphi = \frac{\pi}{2} \) as seen in \cref{subfig:rotorAt.5pi} halves the
-        effective area of the capacitor halfing the total capacitance. At an angular displacement of \( \varphi = \pi \)
-        the capacitance equates to zero respectively.\par
+        effective area of the capacitor halving the total capacitance. At an angular displacement of \( \varphi = \pi \)
+        the capacitance equates to zero respectively.\\
         Combining \cref{eq:angularCapacitance} and \cref{eq:angularDependencyOfTheArea} gives \footnote{The solution is missing a factor of 2 in front of \(\varphi\)}
         \begin{equation}
             C_{1,2} = \varepsilon_0 \frac{\pi D^2}{16d} \left( 1 \pm \frac{2\varphi}{\pi} \right)
@@ -201,7 +211,7 @@
             \end{cases}
         \end{equation}
         %
-    \subsection*{Time to Reach the Threshold Voltage}\label{sec:preparation_task_6}
+    \subsection{Time to Reach the Threshold Voltage}\label{sec:preparation_task_6}
         %
         The charging curve of a capacitor is given by \cref{eq:chargingCurve}.
         \begin{equation}
@@ -218,12 +228,12 @@
         \end{gather}
         with the time constant \( \tau = R \cdot C \).
         %
-    \subsection*{Determining the Angular Deflection by the Difference of Timer Ticks}\label{sec:preparation_task_7}
+    \subsection{Determining the Angular Deflection by the Difference of Timer Ticks}\label{sec:preparation_task_7}
         %
-        The time to reach the threshold voltage as of \cref{eq:timeToThresholfVoltage} is captured indipendently due to
+        The time to reach the threshold voltage as of \cref{eq:timeToThresholfVoltage} is captured independently due to
         each capacitor being connected to individual GPIOs.\par
         Since the charging curve of the capacitors differs in an anti-proportional manner when an angular deflection takes
-        place the absolute value of the time difference gives the the angle about zero while the sign gives the direction.
+        place the absolute value of the time difference gives the angle about zero while the sign gives the direction.
         Therefore, taken these considerations in account and merging \cref{eq:angularCapacitance} and \cref{eq:timeToThresholfVoltage}
         gives:
         \begin{align}
@@ -232,18 +242,19 @@
                             &= -\varepsilon_0 R \frac{4D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \cdot \varphi
             \label{eq:time_to_reach_thresholdVoltage}
         \end{align}
-        Here \( \varepsilon_0, R, D, d, U_{th} \text{ and } U_0 \) remain constant and can be gathered as a proportionality
+        Here \( \varepsilon_0 \), \( R \), \( D \), \( d \), \( U_{th} \) and \( U_0 \) remain constant and can be gathered as a proportionality
         factor. This reduces \cref{eq:time_to_reach_thresholdVoltage} to
         \begin{equation}
             \Delta t_{th}(\varphi) = \chi \cdot \varphi
             \label{eq:simplified_time_to_reach_thresholdVoltage}
         \end{equation}
         The \micro C checks the state of the input pin once every cycle. To take that into account the difference in threshold time
-        \( \Delta t_{th} \) has to be devided by the cycle time \( \Delta t \) of the \micro C which gives the number of cycles it took for the
+        \( \Delta t_{th} \) has to be divided by the cycle time \( \Delta t \) of the \micro C which gives the number of cycles it took for the
         input pins to switch state from low to high. If a change takes place at a non integer multiple of \( \Delta t \)
-        the \micro C will register a transision on the subsequent cycle, thus, for the cycle count \( n \) applies \( n \in \mathbb{N} \).
-        Furthermore, a non-integer value for \( n \) has to be rounded up to the next integer value.\par
-        Mathmatically the above considerations yield
+        the \micro C will register a transition on the subsequent cycle, thus, for the cycle count \( n \) applies \( n \in \mathbb{N} \).
+        Furthermore, a non-integer value for \( n \) has to be rounded up to the next integer value.
+
+        Mathematically the above considerations yield
         \begin{equation}
             n(\varphi) = \left\lceil \frac{\left\vert \Delta t_{th}(\varphi) \right\vert }{\Delta t} \right\rceil = \left\lceil \chi' \cdot \vert\varphi\vert \right\rceil \qquad \text{with} \qquad n(\varphi): n(\varphi) \in \mathbb{N}
             \label{eq:value_of_cycle_Count}
@@ -255,20 +266,21 @@
         \end{equation}
         to distinguish between a CW/CCW rotation.
         %
-    \subsection*{Sensitivity of the Angular Sensor}\label{sec:preparation_task_8}
+    \subsection{Sensitivity of the Angular Sensor}\label{sec:preparation_task_8}
         %
         As seen in \cref{eq:simplified_time_to_reach_thresholdVoltage} the tick rate relates linearly with the angular displacement \( \varphi \).
         Therefore, the maximum resolution of the angular sensor expressed as \textit{ticks per radiant} \textbf{is} \( \chi' \).
         \begin{equation}
             \frac{dn(\varphi)}{d\varphi} = \chi' \cdot \varphi \frac{d}{d\varphi} = \chi'
         \end{equation}
-        \begin{figure}
+        \begin{figure}[H]
             \centering
             \includegraphics[width=.7\textwidth]{aufbau/clk_signal_timing_diagram.jpg}
-            \caption[Timing diagram showing the signal transision]{Timing diagram showing the signal transision.}
+            \caption[Timing diagram showing the signal transition]{Timing diagram showing the signal transition.}
             \label{fig:timing_diagram}
         \end{figure}
-        The clock frequency of the \micro C is \( f = \SI[]{16}[]{MHz} \) which gives a cycle time of \( \delta t = \SI[]{62.5}[]{ns} \).\par
+        The clock frequency of the \micro C is \( f = \SI[]{16}[]{MHz} \) which gives a cycle time of \( \delta t = \SI[]{62.5}[]{ns} \).
+        
         To ready the capacitors for the next charging cycle they need to be discharged as quick as possible. Considering
         that a time to discharge the capacitors \( < \Delta t \) makes no significant difference the unknown value \( R \)
         of the resistor can be approximated as
@@ -278,9 +290,9 @@
             \frac{\Delta t}{3C_{max}} = R
             \label{eq:resistor_approximation}
         \end{gather}
-        In the equation above the assumptions are made that a discharge rate of 95\% is sufficiant and the circuit needs
+        In the equation above the assumptions are made that a discharge rate of 95\% is sufficient and the circuit needs
         to be able to discharge the capacitor within the timeframe \( \Delta t \) while being at its maximum capacitance.
-        Thus
+        Thus,
         \begin{align}
             C_{max} &= \varepsilon_0 \frac{\pi D^2}{8d} \nonumber \\
                     &= \SI{8,85\cdot10^{-12}}{\frac{\ampere\second}{\volt\metre}} \frac{\pi \cdot \SI{0.12^2}{m^2}}{8 \cdot \SI{0.01}{m}} \nonumber \\
@@ -295,6 +307,7 @@
         the latter is chosen as a higher resistance would increase the discharge time.\par\medskip
         Plugging in the given values of for \( \varepsilon_0, D, d, U_{th}, U_0 \) and the calculated values for \( \Delta t \text{ and } R \)
         equates \cref{eq:simplified_time_to_reach_thresholdVoltage} to
+    
         \begin{align}
             \chi'   &= -\varepsilon_0 R \frac{4 D^2}{16d} \ln\left( 1 - \frac{U_{th}}{U_0} \right) \Delta t^{-1} \nonumber \\
                     &= -\SI{8.85 \cdot 10^{-12}}{\frac{As}{Vm}} \cdot \SI{3.9}{k\ohm} \cdot \frac{4 \cdot \SI{0.12^2}{\metre\squared}}{16 \cdot \SI{0.01}{\metre}} \ln\left( 1 - \frac{\SI{2.5}{\volt}}{\SI{5}{\volt}} \right) \cdot \frac{1}{\SI{62.5}{ns}} \nonumber \\

@@ -1,1 +1,45 @@
 \chapter{Execution}
+    \section{Angular Sensor}
+        The current through the electromagnet, which operates the eddy current brake, is set to \(I = \SI{1}{A}\). With the
+        zero adjustment (No. 3 in \cref{subfig:setup_total}), the copper disk is set to a deflection of \(\varphi = \SI{-90}{\degree}\).
+        The recording using \textsc{RealTerm} is started. Some values are captured and saved. The deflection is decreased by \SI{10}{\degree}
+        and a new recording is started and saved. This process is repeated in increments of \SI{10}{\degree} until a deflection of
+        \(\varphi = \SI{+90}{\degree}\) is reached. At the end, the current through the electromagnet is set back to \(I = \SI{0}{A}\).
+%
+    \section{Torsional Pendulum}
+        \subsection{Natural Angular Frequency and Damping Coefficient}
+            The deflection of the pendulum is set back to \(\varphi = \SI{0}{\degree}\) by zero adjustment. Seven series of measurements
+            are recorded and saved. Each measurement series runs for \SI{300}{s}. Each time a different current is set, as shown
+            in \cref{tab:currents}. At each measurement, the disk is carefully deflected to \(\varphi = \SI{75}{\degree}\) and
+            held. At the moment the reset button on the microcontroller is pressed, the pendulum is released while avoiding
+            unnecessary oscillations. At higher currents, the oscillation ends before the completion of the \SI{300}{s}. In these cases, the
+            capturing is ended earlier.
+        \begin{table}[H]
+            \centering
+            \caption[Currents set]{Currents set in each measurement.}
+            \label{tab:currents}
+            \begin{tabular}{@{}ll@{}}
+                \toprule
+                no.     & $I$\\
+                \midrule
+                1       & \SI{0}{A}\\
+                2       & \SI{0.1}{A}\\
+                3       & \SI{0.2}{A}\\
+                4       & \SI{0.3}{A}\\
+                5       & \SI{0.4}{A}\\
+                6       & \SI{0.5}{A}\\
+                7       & \SI{1.3}{A}\\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+        At the end, the current through the electromagnet is set back to \(I = \SI{0}{A}\).
+        %
+        \subsection{Rotational Inertia}
+            The diameter, length, and mass of the three given rods are measured and the values, including their uncertainty, are noted.
+            For this purpose, a measuring caliper, a steel ruler and the balance provided in the laboratory rooms are used. The current
+            is set to \(I = \SI{100}{mA}\). The first rod is inserted into the cross bore and carefully screwed tight. The hole is
+            located between the copper plate and the angular sensor. An already mounted rod is shown in Fig. \cref{subfig:setup_detailed}. When
+            mounting, the rod is positioned as centrally as possible in the socket. The disk is carefully deflected to
+            \(\varphi = \SI{75}{\degree}\) and held. At the moment the reset button on the microcontroller is pressed, the pendulum
+            is released avoiding unnecessary oscillations. The measurement ends after the pendulum has come to rest. The data is saved
+            and the measurement is repeated for the other rods.
