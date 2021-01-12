@@ -2,19 +2,28 @@
 
 \section{Angular Sensor}
     Before investigating the dependence of the angle and the timer ticks, it is needed to determine the mean value of the timer
-    ticks for each angle. 20 values are included each.
-    %
-    \begin{align*}
-        \bar{n}_{+90\SIUnitSymbolDegree}    &=601.34    &\bar{n}_{0\SIUnitSymbolDegree}=14.36   &&\bar{n}_{-90\SIUnitSymbolDegree}=-499.79\\
-        \bar{n}_{+80\SIUnitSymbolDegree}    &=549.63    &                                       &&\bar{n}_{-80\SIUnitSymbolDegree}=-474.44\\
-        \bar{n}_{+70\SIUnitSymbolDegree}    &=482.26    &                                       &&\bar{n}_{-70\SIUnitSymbolDegree}=-459.46\\
-        \bar{n}_{+60\SIUnitSymbolDegree}    &=421.93    &                                       &&\bar{n}_{-60\SIUnitSymbolDegree}=-396.87\\
-        \bar{n}_{+50\SIUnitSymbolDegree}    &=353.10    &                                       &&\bar{n}_{-50\SIUnitSymbolDegree}=-331.20\\
-        \bar{n}_{+40\SIUnitSymbolDegree}    &=288.13    &                                       &&\bar{n}_{-40\SIUnitSymbolDegree}=-262.31\\
-        \bar{n}_{+30\SIUnitSymbolDegree}    &=220.58    &                                       &&\bar{n}_{-30\SIUnitSymbolDegree}=-195.80\\
-        \bar{n}_{+20\SIUnitSymbolDegree}    &=147.85    &                                       &&\bar{n}_{-20\SIUnitSymbolDegree}=-126.04\\
-        \bar{n}_{+10\SIUnitSymbolDegree}    &=83.57     &                                       &&\bar{n}_{-10\SIUnitSymbolDegree}=-55.33\\
-    \end{align*}
+    ticks for each angle. The mean values are computed taking 20 samples each.\par
+    \begin{table}[h]
+        \caption[Mean value of timer ticks per angular displacement]{Mean value of timer ticks per angular displacement}
+        \centering
+        \begin{tabular}{@{}S[table-format=+2]S[table-format=3.2]cS[table-format=+2]S[table-format=+3.2]@{}}
+            \toprule
+            \varphi / \si[]{\degree}            &\bar{n}        &\hspace{20mm}  &\varphi / \si[]{\degree}   &\bar{n}\\
+            \midrule
+            +90                                 &601.34         &               &-10                        &-55.33\\
+            +80                                 &549.63         &               &-20                        &-126.04\\
+            +70                                 &482.26         &               &-30                        &-195.80\\
+            +60                                 &421.93         &               &-40                        &-262.31\\
+            +50                                 &353.10         &               &-50                        &-331.20\\
+            +40                                 &288.13         &               &-60                        &-396.87\\
+            +30                                 &220.58         &               &-70                        &-459.46\\
+            +20                                 &147.85         &               &-80                        &-474.44\\
+            +10                                 &83.57          &               &-90                        &-499.79\\
+            +0                                  &14.36          &               &                           &\\
+            \bottomrule
+        \end{tabular}
+        \label{tab:mean ticks per angle}
+    \end{table}
     %
     In \cref{fig:angular-sensor} the timer ticks $ n $ are plotted as a function of the angle $ \varphi $.
     %
