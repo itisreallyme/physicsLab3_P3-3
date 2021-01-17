@@ -54,7 +54,7 @@
 \section{Preparation}
 %
     \subsection{Deriving the Equation for Damped Free Oscillation}\label{sec:preparation_task_1}
-        %
+    %
         \begin{equation}
             \vec{M}_{ Inert } + \vec{M}_{ Frict } + \vec{ M}_{ Rest } = 0 \quad \Leftrightarrow \quad J \cdot \ddot\varphi(t) - k \cdot \dot\varphi(t) - D^* \cdot \varphi(t) = 0
         \end{equation}
@@ -127,6 +127,7 @@
             \Leftrightarrow \quad   &\left( \frac{T_{P+R}}{T_P} \right)^2 =\frac{J_P+J_R}{J_P}=1+\frac{J_R}{J_P} \nonumber\\
             \Leftrightarrow \quad   &\frac{J_R}{J_P}=\left( \frac{T_{P+R}}{T_P} \right)^2-1 \nonumber\\
             \Rightarrow \quad       &J_P=\frac{J_R}{\left( \frac{T_{P+R}}{T_P} \right)^2-1}
+            \label{eq:inertia}
         \end{align}
         %
         The angular inertia of the pendulum can be calculated without knowing the torsion constant \( D^* \).
@@ -155,6 +156,7 @@
         gives
         \begin{equation}
             J_Z = \int_{-\nicefrac{L}{2}}^{\nicefrac{L}{2}} \frac{M}{L} x^2 dx = \frac{1}{12}M L^2
+            \label{eq:rotationalIntertia_of_Cyl alternate}
         \end{equation}
         %
     \subsection{Equations for the Sensor Capacitances}\label{sec:preparation_task_5}
@@ -218,7 +220,7 @@
             U_C(t) = U_0 ( 1-e^{-\frac{t}{\tau}})
             \label{eq:chargingCurve}
         \end{equation}
-        Being interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \) \cref{eq:chargingCurve}
+        Being interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \), \cref{eq:chargingCurve}
         can be transformed as follows:
         \begin{gather}
             1- \frac{U_{th}}{U_0} = e^{-\frac{t_{th}}{\tau}} \nonumber \\
