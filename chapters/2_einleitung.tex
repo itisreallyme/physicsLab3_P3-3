@@ -25,19 +25,20 @@
         A cylindrical rot has a rotational inertia about its center of: \(I_S = \frac{1}{12}ml^2\)
         %
     \subsection*{\textsc{Steiner}'s Theorem}
-        The \textsc{Steiner}'s Theorem: \(I = I_S + md^2\)
+        \textsc{Steiner}'s Theorem: \(I = I_S + md^2\)
         %
     \subsection*{Eddy Current Brake}
         The equivalent circuit of a conductor exposed to a changing magnetic field is composed of only a voltage source
         and a resistor. The voltage across this resistor is induced as of the law of electromagnetic induction: \(U_{ind} = -NA\frac{\partial B}{\partial t}\).
-        The resulting current creates a magnetic field opposing the inducing field.
+        The resulting current creates a magnetic field opposing the inducing field. If the change of the inducing magnetic
+        field is due to a mechanical movement, the induced magnetic field will this movement as well.
         % Eddy currents are created when a conductor passes through a magnetic field, which creates opposing forces that spin
         % inside the conductor. According to Lenz’s law, an eddy current produces a magnetic field that is in opposition
         % to the magnetic field that produced it, and therefore eddy currents are an inverse response to the source magnetic field.
         %
     \subsection*{Constant Current Constant Voltage Operation of a PSU}
-        As the name implies a power supply in CC/CV operation mode keeps the output current and output voltage constant
-        independently of the load applied.
+        As the name implies a power supply in CC/CV (\textbf{C}onstant \textbf{C}urrent/\textbf{C}onstant \textbf{V}oltage)
+        operation mode keeps the output current and/or output voltage constant independently of the load applied.
         % In constant voltage mode, which is sometimes referred to as voltage-controlled mode, a power supply behaves like
         % a voltage source, holding the voltage across the output terminals constant while the current output varies,
         % depending on load conditions. Constant current mode is essentially the opposite of constant voltage mode. In
@@ -217,13 +218,13 @@
         %
         The charging curve of a capacitor is given by \cref{eq:chargingCurve}.
         \begin{equation}
-            U_C(t) = U_0 ( 1-e^{-\frac{t}{\tau}})
+            U_C(t) = U_0 \left(1-exp\left(-\frac{t}{\tau}\right)\right)
             \label{eq:chargingCurve}
         \end{equation}
         Being interested at the time \( t_{th} \) it takes to reach a certain threshold voltage \( U_{th} \), \cref{eq:chargingCurve}
         can be transformed as follows:
         \begin{gather}
-            1- \frac{U_{th}}{U_0} = e^{-\frac{t_{th}}{\tau}} \nonumber \\
+            1- \frac{U_{th}}{U_0} = exp\left(-\frac{t_{th}}{\tau}\right) \nonumber \\
             \Leftrightarrow \nonumber \\
             t_{th} = - \ln\left(1- \frac{U_{th}}{U_0}\right) \cdot \tau
             \label{eq:timeToThresholfVoltage}
