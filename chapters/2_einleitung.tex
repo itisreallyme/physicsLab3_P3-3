@@ -14,7 +14,7 @@
         frequency \( \omega_0 \).
     \subsection*{Differential Equation of the Damped Harmonic Oscillation}
         \begin{equation}
-            I \ddot{\varphi} = -D\varphi -\rho\dot{\varphi}+M\cos(\omega t)
+            J \ddot{\varphi} = -D\varphi -\rho\dot{\varphi}+M\cos(\omega t)
         \end{equation}
     \subsection*{Damping cases}
         Overdamped: The system returns to equilibrium without oscillating.\par
@@ -22,10 +22,10 @@
         Underdamped: The system oscillates (at reduced frequency compared to the undamped case) with the amplitude gradually
         decreasing to zero.
     \subsection*{Rotational Inerta}
-        A cylindrical rot has a rotational inertia about its center of: \(I_S = \frac{1}{12}ml^2\)
+        A cylindrical rot has a rotational inertia about its center of: \(J_S = \frac{1}{12}ml^2\)
         %
     \subsection*{\textsc{Steiner}'s Theorem}
-        \textsc{Steiner}'s Theorem: \(I = I_S + md^2\)
+        \textsc{Steiner}'s Theorem: \(J = J_S + md^2\)
         %
     \subsection*{Eddy Current Brake}
         The equivalent circuit of a conductor exposed to a changing magnetic field is composed of only a voltage source
@@ -138,7 +138,7 @@
         \begin{figure}[h]
             \centering
             \includegraphics[width=.6\textwidth]{Preparation/rotating_rod.jpg}
-            \caption[Rotating rod]{Scheme of an orthogonally to its center axis rotating rod.}
+            \caption[Rotating rod]{Scheme of a rod rotating orthogonally about its center axis.}
             \label{fig:rotationalIntertia_of_Cyl}
         \end{figure}
         %
@@ -176,7 +176,7 @@
             \subfloat[Rotor at \( \varphi = 0 \)\label{subfig:rotorAt.5pi}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_0.5pi.jpg}}
             \subfloat[Rotor at \( \varphi = \pm \frac{\pi}{2} \)\label{subfig:rotorAtpi}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_pi.jpg}}
             \subfloat[Rotor at \( \varphi = \mp \frac{\pi}{2} \)\label{subfig:rotorAt0}]{\includegraphics[width=.3\textwidth]{aufbau/statorRotorStator_0.jpg}}
-            \caption[Schematical assembly of the angular sensor]{Schematical assembly of the angular sensor. The semi circular rotor plate (green) sandwiched between the two stators (red). The area of the rotor facing one of the vertical stator
+            \caption[Schematic assembly of the angular sensor]{Schematic assembly of the angular sensor. The semi circular rotor plate (green) sandwiched between the two stators (red). The area of the rotor facing one of the vertical stator
             pairs varies with the angular displacement \( \varphi \)
             of the rotor.}
             \label{fig:rotorPositions}
@@ -271,8 +271,8 @@
         %
     \subsection{Sensitivity of the Angular Sensor}\label{sec:preparation_task_8}
         %
-        As seen in \cref{eq:simplified_time_to_reach_thresholdVoltage} the tick rate relates linearly with the angular displacement \( \varphi \).
-        Therefore, the maximum resolution of the angular sensor expressed as \textit{ticks per radiant} \textbf{is} \( \chi' \).
+        As seen in \cref{eq:simplified_time_to_reach_thresholdVoltage}, the tick rate relates linearly with the angular displacement \( \varphi \).
+        Therefore, the maximum resolution of the angular sensor expressed as \textit{ticks per radiant} is \( \chi' \).
         \begin{equation}
             \frac{dn(\varphi)}{d\varphi} = \chi' \cdot \varphi \frac{d}{d\varphi} = \chi'
         \end{equation}
@@ -282,7 +282,7 @@
             \caption[Timing diagram showing the signal transition]{Timing diagram showing the signal transition.}
             \label{fig:timing_diagram}
         \end{figure}
-        The clock frequency of the \micro C is \( f = \SI[]{16}[]{MHz} \) which gives a cycle time of \( \delta t = \SI[]{62.5}[]{ns} \).
+        The clock frequency of the \micro C is \( f = \SI{16}{MHz} \) which gives a cycle time of \( \delta t = \SI{62.5}{ns} \).
         
         To ready the capacitors for the next charging cycle they need to be discharged as quick as possible. Considering
         that a time to discharge the capacitors \( < \Delta t \) makes no significant difference the unknown value \( R \)
@@ -306,7 +306,7 @@
         \begin{equation}
             \frac{\SI{62.5}{ns}}{3 \cdot \SI{5.01}{pF}} \approx \SI{4160.9}{k\ohm}
         \end{equation}
-        This lies between the two more common E-Series values of \SI{4.7}{k\ohm} and \SI{3.9}{k\ohm}. For further calculations
+        This lies between the two more common E-Series values of \(\SI{4.7}{k\ohm}\) and \(\SI{3.9}{k\ohm}\). For further calculations
         the latter is chosen as a higher resistance would increase the discharge time.\par\medskip
         Plugging in the given values of for \( \varepsilon_0, D, d, U_{th}, U_0 \) and the calculated values for \( \Delta t \text{ and } R \)
         equates \cref{eq:simplified_time_to_reach_thresholdVoltage} to
